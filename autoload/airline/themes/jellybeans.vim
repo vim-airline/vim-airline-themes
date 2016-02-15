@@ -12,7 +12,7 @@ let s:gui09 = "#f99157"
 let s:gui0A = "#fac863"
 let s:gui0B = "#437019"
 let s:gui0C = "#5fb3b3"
-let s:gui0D = "#345FA8"
+let s:gui0D = "#0d61ac"
 let s:gui0E = "#c594c5"
 let s:gui0F = "#ab7967"
 
@@ -29,7 +29,7 @@ let s:cterm09 = "209"
 let s:cterm0A = "221"
 let s:cterm0B = "28"
 let s:cterm0C = "73"
-let s:cterm0D = "68"
+let s:cterm0D = "04"
 let s:cterm0E = "176"
 let s:cterm0F = "137"
 
@@ -39,7 +39,7 @@ let s:ctermWhite = "15"
 let g:airline#themes#jellybeans#palette = {}
 
 " Normal mode
-let s:N1 = [ s:guiWhite , s:gui0D , s:ctermWhite , s:cterm0D  ]
+let s:N1 = [ s:gui07 , s:gui0D , s:cterm07 , s:cterm0D  ]
 let s:N2 = [ s:guiWhite , s:gui01 , s:ctermWhite , s:cterm01  ]
 let s:N3 = [ s:gui02 , s:gui00 , s:cterm02 , s:cterm00  ]
 let g:airline#themes#jellybeans#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
