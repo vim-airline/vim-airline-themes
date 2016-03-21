@@ -23,7 +23,7 @@ conjuction with |vim-airline|
 ==============================================================================
 FEATURES                                              *airline-themes-list*
 
-Currently this repository contains the following themes: >
+Currently this repository contains the following themes:
 
     * badwolf
     * base16
@@ -90,7 +90,7 @@ Currently this repository contains the following themes: >
     * silver
     * simple
     * sol
-    * solarized
+    * solarized (|airline-theme-solarized|)
     * term
     * tomorrow
     * ubaryd
@@ -98,11 +98,22 @@ Currently this repository contains the following themes: >
     * wombat
     * xtermlight
     * zenburn
-<
+
 ==============================================================================
 NAME                                         *airline-themes-configuration*
 
-(None yet)
+                                                  |airline-theme-solarized|
+*g:solarized_base16*
+
+Base16 has a Solarized theme with the usual colors, but mapped in the
+terminal differently.  The main difference is that the bright colors,
+Ansi 9-15, are left the same as their Ansi 1-7 counterparts.  The
+remaining solarized colors are mapped into higher indexes by using
+Base16 Shell.  To enable it:
+>
+    let g:solarized_base16 = 1
+>
+See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
 
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
