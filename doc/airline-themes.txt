@@ -21,7 +21,7 @@ This is a plugin for vim-airline and provides several themes to be used in
 conjuction with |vim-airline|
 
 ==============================================================================
-FEATURES                                                   *airline-themes*
+FEATURES                                              *airline-themes-list*
 
 Currently this repository contains the following themes: >
 
