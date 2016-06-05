@@ -115,6 +115,13 @@ Base16 Shell.  To enable it:
 >
 See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
 
+*g:airline_solarized_normal_green*
+
+Turns the outer-most section of the statusline Solarized green, making it
+look more like classic powerline in normal mode. To enable it:
+>
+    let g:airline_solarized_normal_green = 1
+
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
