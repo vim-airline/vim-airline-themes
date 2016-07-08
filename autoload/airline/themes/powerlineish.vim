@@ -41,6 +41,6 @@ let g:airline#themes#powerlineish#palette.replace = copy(airline#themes#powerlin
 let g:airline#themes#powerlineish#palette.replace.airline_a = [ s:RE[0] , s:RE[1] , s:RE[2] , s:RE[3] , '' ]
 
 
-let s:IA = [ s:N2[1] , s:N3[1] , s:N2[3] , s:N3[3] , '' ]
+let s:IA = [ s:N2[0] , s:N3[1] , s:N2[2] , s:N3[3] , '' ]
 let g:airline#themes#powerlineish#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
 
