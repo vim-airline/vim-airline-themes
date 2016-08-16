@@ -122,6 +122,13 @@ look more like classic powerline in normal mode. To enable it:
 >
     let g:airline_solarized_normal_green = 1
 
+g:airline_solarized_dark_inactive_border
+
+Changes inactive window panes to have a dark bottom border instead
+of light by default. To enable it:
+>
+    let g:airline_solarized_dark_inactive_border = 1
+
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
