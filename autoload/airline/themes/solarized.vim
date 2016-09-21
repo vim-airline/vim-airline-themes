@@ -4,10 +4,11 @@ function! airline#themes#solarized#refresh()
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Options
   """"""""""""""""""""""""""""""""""""""""""""""""
-  let s:background  = get(g:, 'airline_solarized_bg', &background)
-  let s:ansi_colors = get(g:, 'solarized_termcolors', 16) != 256 && &t_Co >= 16 ? 1 : 0
-  let s:use_green   = get(g:, 'airline_solarized_normal_green', 0)
-  let s:tty         = &t_Co == 8
+  let s:background           = get(g:, 'airline_solarized_bg', &background)
+  let s:ansi_colors          = get(g:, 'solarized_termcolors', 16) != 256 && &t_Co >= 16 ? 1 : 0
+  let s:use_green            = get(g:, 'airline_solarized_normal_green', 0)
+  let s:dark_inactive_border = get(g:, 'airline_solarized_dark_inactive_border', 0)
+  let s:tty                  = &t_Co == 8
 
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Colors
@@ -101,7 +102,11 @@ function! airline#themes#solarized#refresh()
   " Inactive, according to VertSplit in solarized
   " (bg dark: base00; bg light: base0)
   if s:background == 'dark'
-    let s:IA = [s:base02, s:base00, '']
+    if s:dark_inactive_border
+      let s:IA = [s:base01, s:base02, '']
+    else
+      let s:IA = [s:base02, s:base00, '']
+    endif
   else
     let s:IA = [s:base2, s:base0, '']
   endif
