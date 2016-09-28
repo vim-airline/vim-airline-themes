@@ -19,6 +19,13 @@ This plugin follows the standard runtime path structure, and as such it can be i
   *  copy all of the files into your `~/.vim` directory
 
 
+# Using a Theme
+
+Once installed, use  `:AirlineTheme <theme>` to set the theme, e.g. `:AirlineTheme simple`
+
+To set in .vimrc, use `let g:AirlineTheme='<theme>'`, e.g. `let g:AirlineTheme='simple'`
+
+
 # Contribution Guidelines
 
 ## New themes
