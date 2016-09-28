@@ -102,6 +102,13 @@ Currently this repository contains the following themes:
 ==============================================================================
 NAME                                         *airline-themes-configuration*
 
+						    *g:airline_theme*
+
+To define a theme to be used by vim-airline you can set the variable
+g:airline_theme in your |.vimrc|  like this: >
+
+    :let g:airline_theme='dark'
+<
                                                   |airline-theme-solarized|
 *g:solarized_base16*
 

@@ -23,7 +23,7 @@ This plugin follows the standard runtime path structure, and as such it can be i
 
 Once installed, use  `:AirlineTheme <theme>` to set the theme, e.g. `:AirlineTheme simple`
 
-To set in .vimrc, use `let g:AirlineTheme='<theme>'`, e.g. `let g:AirlineTheme='simple'`
+To set in .vimrc, use `let g:airline_theme='<theme>'`, e.g. `let g:airline_theme='simple'`
 
 
 # Contribution Guidelines
