@@ -1,4 +1,5 @@
 " github: https://github.com/LuciusChen
+" vim-theme: solarized dark
 scriptencoding utf-8
 
 let g:airline#themes#qwq#palette = {}
