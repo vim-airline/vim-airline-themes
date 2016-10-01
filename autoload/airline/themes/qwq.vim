@@ -1,5 +1,4 @@
 " github: https://github.com/LuciusChen
-" vim-theme: solarized dark
 scriptencoding utf-8
 
 let g:airline#themes#qwq#palette = {}
@@ -41,9 +40,9 @@ let g:airline#themes#qwq#palette.visual = airline#themes#generate_color_map(s:V1
 let g:airline#themes#qwq#palette.visual_modified = { 'airline_c': [ s:V4[0], s:V4[1], s:V4[2], s:V4[3], '' ], }
 
 " inactive
-let s:IA1 = [ '#0E3B4F' , '#F5F7C4' , 239 , 234 , '' ]
-let s:IA2 = [ '#0E3B4F' , '#F2EEA4' , 239 , 235 , '' ]
-let s:IA3 = [ '#ffffff' , '#D8D591' , 239 , 236 , '' ]
+let s:IA1 = [ '#0E3B4F' , '#FEFCF9' , 239 , 234 , '' ]
+let s:IA2 = [ '#0E3B4F' , '#DDC6AF' , 239 , 235 , '' ]
+let s:IA3 = [ '#ffffff' , '#A28E79' , 239 , 236 , '' ]
 let g:airline#themes#qwq#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 let g:airline#themes#qwq#palette.inactive_modified = { 'airline_c': [ '#ffffff', '', 97, '', '' ], }
 
