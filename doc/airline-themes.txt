@@ -67,12 +67,14 @@ Currently this repository contains the following themes:
     * base16color
     * behelit
     * bubblegum
+    * cobalt2
     * cool
     * dark
     * distinguished
     * durant
     * hybrid
     * hybridline
+    * jay
     * jellybeans
     * kalisi
     * kolor
@@ -85,7 +87,9 @@ Currently this repository contains the following themes:
     * murmur
     * papercolor
     * powerlineish
+    * qwq
     * raven
+    * ravenpower
     * serene
     * silver
     * simple
@@ -95,6 +99,7 @@ Currently this repository contains the following themes:
     * tomorrow
     * ubaryd
     * understated
+    * vice
     * wombat
     * xtermlight
     * zenburn
