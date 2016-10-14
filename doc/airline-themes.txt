@@ -26,7 +26,7 @@ FEATURES                                              *airline-themes-list*
 Currently this repository contains the following themes:
 
     * badwolf
-    * base16
+    * base16(|airline-theme-base16|)
     * base16_3024
     * base16_apathy
     * base16_ashes
@@ -109,7 +109,7 @@ g:airline_theme in your |.vimrc|  like this: >
 
     :let g:airline_theme='dark'
 <
-                                                  |airline-theme-solarized|
+                                                  *airline-theme-solarized*
 *g:solarized_base16*
 
 Base16 has a Solarized theme with the usual colors, but mapped in the
@@ -129,13 +129,34 @@ look more like classic powerline in normal mode. To enable it:
 >
     let g:airline_solarized_normal_green = 1
 
-g:airline_solarized_dark_inactive_border
+*g:airline_solarized_dark_inactive_border*
 
 Changes inactive window panes to have a dark bottom border instead
 of light by default. To enable it:
 >
     let g:airline_solarized_dark_inactive_border = 1
 
+                                                  *airline-theme-base16*
+Base16 is a popular theme from Chris Kempson
+(https://github.com/chriskempson/base16-vim)
+
+The default theme is base16, all other base16-themes have been generated and
+might not support all options.
+
+*g:airline_base16_improved_contrast*
+
+Improves the contrast for the inactive statusline. To enable it: >
+
+    let g:airline_base16_improved_contrast = 1
+<
+
+*airline#themes#base16#constant*
+
+Uses a predefined colorpalette for defining the colors, instead of guessing
+the values from other highlight groups. To enable it: >
+
+    let g:airline#themes#base16#constant = 1
+<
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
