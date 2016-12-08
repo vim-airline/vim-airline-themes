@@ -26,6 +26,7 @@ FEATURES                                              *airline-themes-list*
 Currently this repository contains the following themes:
 
     * aurora
+    * badcat
     * badwolf
     * base16(|airline-theme-base16|)
     * base16_3024
