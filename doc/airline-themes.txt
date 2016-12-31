@@ -174,13 +174,6 @@ colors in the terminal: (https://github.com/chriskempson/base16-shell). The
 colors used in this theme are within the 21 term colors set by Base16 Shell.
 The theme supports 2 options described below.
 
-*g:airline_base16_improved_contrast*
-
-Improves the contrast for the inactive statusline. To enable it: >
-
-    let g:airline_base16_improved_contrast = 1
-<
-
 *g:airline_base16_solarized*
 
 Adjusts the colors to match base16_solirazed shell theme. You may also try to
