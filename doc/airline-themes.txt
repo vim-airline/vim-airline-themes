@@ -25,6 +25,7 @@ FEATURES                                              *airline-themes-list*
 
 Currently this repository contains the following themes:
 
+    * alduin
     * aurora
     * badcat
     * badwolf
