@@ -88,6 +88,7 @@ Currently this repository contains the following themes:
     * molokai
     * monochrome
     * murmur
+    * onedark
     * papercolor
     * powerlineish
     * qwq
