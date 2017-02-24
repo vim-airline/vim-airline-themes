@@ -59,6 +59,7 @@ Currently this repository contains the following themes:
     * base16_mocha
     * base16_monokai
     * base16_ocean
+    * base16_oceanicnext
     * base16_paraiso
     * base16_pop
     * base16_railscasts
