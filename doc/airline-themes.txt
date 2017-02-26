@@ -97,6 +97,7 @@ Currently this repository contains the following themes:
     * raven
     * ravenpower
     * serene
+    * sierra
     * silver
     * simple
     * sol
