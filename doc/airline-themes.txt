@@ -29,8 +29,8 @@ Currently this repository contains the following themes:
     * aurora
     * badcat
     * badwolf
-    * base16(|airline-theme-base16|)
-    * base16_shell(|airline-theme-base16_shell|)
+    * base16 (|airline-theme-base16|)
+    * base16_shell (|airline-theme-base16_shell|)
     * base16_3024
     * base16_apathy
     * base16_ashes
@@ -90,7 +90,7 @@ Currently this repository contains the following themes:
     * molokai
     * monochrome
     * murmur
-    * onedark
+    * onedark (|airline-theme-onedark|)
     * papercolor
     * powerlineish
     * qwq
@@ -140,6 +140,7 @@ Turns the outer-most section of the statusline Solarized green, making it
 look more like classic powerline in normal mode. To enable it:
 >
     let g:airline_solarized_normal_green = 1
+<
 
 *g:airline_solarized_dark_inactive_border*
 
@@ -147,8 +148,8 @@ Changes inactive window panes to have a dark bottom border instead
 of light by default. To enable it:
 >
     let g:airline_solarized_dark_inactive_border = 1
-
-                                                  *airline-theme-base16*
+<
+                                                    *airline-theme-base16*
 Base16 is a popular theme from Chris Kempson
 (https://github.com/chriskempson/base16-vim)
 
@@ -192,6 +193,20 @@ use it with other Base16 Shell themes. To enable it: >
 
     let g:airline_base16_solarized = 1
 <
+                                                       *airline-theme-onedark*
+
+*g:onedark_termcolors*
+
+Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
+Has no effect if using true/24-bit color. To enable 16-color mode: >
+
+    let g:onedark_termcolors = 16
+<
+
+16-color mode is intended to be used with specific terminal colors as
+described in the installation notes for the joshdick/onedark.vim colorscheme:
+(https://github.com/joshdick/onedark.vim#installation)
+
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
