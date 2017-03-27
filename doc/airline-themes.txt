@@ -67,6 +67,7 @@ Currently this repository contains the following themes:
     * base16_seti
     * base16_shapeshifter
     * base16_solarized
+    * base16_spacemacs
     * base16_summerfruit
     * base16_tomorrow
     * base16_twilight
