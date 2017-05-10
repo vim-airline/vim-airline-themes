@@ -139,6 +139,9 @@ function! airline#themes#solarized#refresh()
   let g:airline#themes#solarized#palette.normal.airline_warning = [
         \ s:NW[0].g, s:NW[1].g, s:NW[0].t, s:NW[1].t, s:NW[2]]
 
+  let g:airline#themes#solarized#palette.normal.airline_error = [
+        \ s:NW[0].g, s:NW[1].g, s:NW[0].t, s:NW[1].t, s:NW[2]]
+
   let g:airline#themes#solarized#palette.normal_modified = {
         \ 'airline_c': [s:NM[0].g, s:NM[1].g,
         \ s:NM[0].t, s:NM[1].t, s:NM[2]]}
