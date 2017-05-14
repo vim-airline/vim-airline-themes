@@ -7,16 +7,16 @@ This is the official theme repository for [vim-airline](https://github.com/vim-a
 This plugin follows the standard runtime path structure, and as such it can be installed with a variety of plugin managers:
 
 *  [Pathogen][4]
-  *  `git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes`
-  *  Remember to run `:Helptags` to generate help tags
+    *  `git clone https://github.com/vim-airline/vim-airline-themes ~/.vim/bundle/vim-airline-themes`
+    *  Remember to run `:Helptags` to generate help tags
 *  [NeoBundle][5]
-  *  `NeoBundle 'vim-airline/vim-airline-themes'`
+    *  `NeoBundle 'vim-airline/vim-airline-themes'`
 *  [Vundle][6]
-  *  `Plugin 'vim-airline/vim-airline-themes'`
+    *  `Plugin 'vim-airline/vim-airline-themes'`
 *  [Plug][7]
-  *  `Plug 'vim-airline/vim-airline-themes'`
+    *  `Plug 'vim-airline/vim-airline-themes'`
 *  manual
-  *  copy all of the files into your `~/.vim` directory
+    *  copy all of the files into your `~/.vim` directory
 
 
 # Using a Theme
