@@ -89,6 +89,7 @@ Currently this repository contains the following themes:
     * light
     * lucius
     * luna
+    * minimalist
     * molokai
     * monochrome
     * murmur
