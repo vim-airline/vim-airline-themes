@@ -79,6 +79,7 @@ Currently this repository contains the following themes:
     * dark
     * distinguished
     * durant
+    * faryfloss
     * hybrid
     * hybridline
     * jay
