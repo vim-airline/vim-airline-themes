@@ -39,7 +39,7 @@ let s:ctermWhite = "231"
 let s:ctermGray = "243"
 
 let g:airline#themes#fairyfloss#palette = {}
-let s:modified = { 'airline_c': [ 's:guiRose', '', 215, '', '' ] }
+let s:modified = { 'airline_c': [ s:guiRose, '', 215, '', '' ] }
 
 " Normal mode
 let s:N1 = [ s:guiSilver , s:guiLavender , s:ctermSilver , s:ctermLavender  ]
