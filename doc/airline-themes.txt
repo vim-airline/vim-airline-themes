@@ -78,6 +78,7 @@ Currently this repository contains the following themes:
     * cobalt2
     * cool
     * dark
+    * deus
     * distinguished
     * durant
     * faryfloss
