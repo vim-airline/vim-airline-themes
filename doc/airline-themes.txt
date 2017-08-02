@@ -213,6 +213,15 @@ Has no effect if using true/24-bit color. To enable 16-color mode: >
 described in the installation notes for the joshdick/onedark.vim colorscheme:
 (https://github.com/joshdick/onedark.vim#installation)
 
+                                                       *airline-theme-deus*
+
+*g:deus_termcolors*
+
+Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
+Has no effect if using true/24-bit color. To enable 16-color mode: >
+
+    let g:onedark_termcolors = 16
+<
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
