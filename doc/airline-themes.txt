@@ -78,6 +78,7 @@ Currently this repository contains the following themes:
     * cobalt2
     * cool
     * dark
+    * dark_minimal
     * deus
     * distinguished
     * durant
@@ -127,6 +128,13 @@ g:airline_theme in your |.vimrc|  like this: >
 
     :let g:airline_theme='dark'
 <
+                                                  *airline-theme-dark_minimal*
+
+This is a copy of the dark.vim theme, however it does not change colors in
+the different modes, so should bring some performance improvements because
+airline does not have to redefine highlighting groups after they have been
+setup once. However, it won't change colors if e.g. the mode changes.
+
                                                   *airline-theme-solarized*
 *g:solarized_base16*
 
