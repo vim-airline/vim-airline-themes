@@ -108,6 +108,7 @@ Currently this repository contains the following themes:
     * qwq
     * raven
     * ravenpower
+    * seagull
     * serene
     * sierra
     * silver
