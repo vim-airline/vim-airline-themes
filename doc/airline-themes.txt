@@ -64,7 +64,7 @@ Currently this repository contains the following themes:
     * base16_mocha
     * base16_monokai
     * base16_ocean
-    * base16_oceanicnext
+    * base16_oceanicnext (|airline-theme-base16-oceanicnext|)
     * base16_paraiso
     * base16_pop
     * base16_railscasts
@@ -73,7 +73,7 @@ Currently this repository contains the following themes:
     * base16_solarized
     * base16_spacemacs
     * base16_summerfruit
-    * base16_tomorrow
+    * base16_tomorrow (|airline-theme-base16_tomorrow|)
     * base16_twilight
     * base16color
     * behelit
@@ -201,19 +201,22 @@ colors in the terminal: (https://github.com/chriskempson/base16-shell). The
 colors used in this theme are within the 21 term colors set by Base16 Shell.
 The theme supports 2 options described below.
 
-*g:airline_base16_oceanicnext*
-
-Allow 256 color use of the base16_oceanicnext theme. Without this setting
-base16_oceanicnext may look incorrect in 256 color mode. To enable it: >
-
-    let base16colorspace = 256
-
 *g:airline_base16_solarized*
 
 Adjusts the colors to match base16_solarized shell theme. You may also try to
 use it with other Base16 Shell themes. To enable it: >
 
     let g:airline_base16_solarized = 1
+<
+                                                 *airline-theme-base16-tomorrow*
+                                                *airline-theme-base16-oceanicnext*
+
+base16 theme for vim-airline matches your active Base16 colorscheme.
+
+Allow 256 color use of the base16 theme. Without this setting
+the theme may look incorrect in 256 color mode. To enable it: >
+
+    let base16colorspace = 256
 <
                                                        *airline-theme-onedark*
 
