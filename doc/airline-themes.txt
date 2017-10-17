@@ -108,6 +108,7 @@ Currently this repository contains the following themes:
     * sierra
     * silver
     * simple
+    * soda
     * sol
     * solarized (|airline-theme-solarized|)
     * term
