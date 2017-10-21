@@ -75,6 +75,7 @@ Currently this repository contains the following themes:
     * base16_twilight
     * base16color
     * behelit
+    * biogoo
     * bubblegum
     * cobalt2
     * cool
