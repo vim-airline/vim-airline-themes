@@ -45,6 +45,7 @@ Currently this repository contains the following themes:
     * base16_brewer
     * base16_bright
     * base16_chalk
+    * base16_classic
     * base16_codeschool
     * base16_colors
     * base16_default
