@@ -89,6 +89,7 @@ Currently this repository contains the following themes:
     * hybridline
     * jay
     * jellybeans
+    * jet
     * kalisi
     * kolor
     * laederon
