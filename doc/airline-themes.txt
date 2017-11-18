@@ -118,6 +118,7 @@ Currently this repository contains the following themes:
     * ubaryd
     * understated
     * vice
+    * violet
     * wombat
     * xtermlight
     * zenburn
