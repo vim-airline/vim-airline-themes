@@ -116,6 +116,7 @@ Currently this repository contains the following themes:
     * sol
     * solarized (|airline-theme-solarized|)
     * term
+    * term_light
     * tomorrow
     * ubaryd
     * understated
