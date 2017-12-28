@@ -87,6 +87,7 @@ Currently this repository contains the following themes:
     * distinguished
     * durant
     * faryfloss
+    * gruvbox
     * hybrid
     * hybridline
     * jay
