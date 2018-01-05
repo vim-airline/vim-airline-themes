@@ -53,6 +53,15 @@ let g:airline#themes#minimalist#palette.insert.airline_error    = g:airline#them
 let g:airline#themes#minimalist#palette.visual.airline_error    = g:airline#themes#minimalist#palette.normal.airline_error
 let g:airline#themes#minimalist#palette.replace.airline_error   = g:airline#themes#minimalist#palette.normal.airline_error
 
+" Terminal
+let s:TE = [ '#1C1C1C' , '#3A3A3A' , 254 , 237 , '' ]
+let g:airline#themes#minimalist#palette.normal.airline_term = [
+        \ s:TE[0], s:TE[1], s:TE[2], s:TE[3]
+        \ ]
+let g:airline#themes#minimalist#palette.insert.airline_term  = g:airline#themes#minimalist#palette.normal.airline_term
+let g:airline#themes#minimalist#palette.visual.airline_term  = g:airline#themes#minimalist#palette.normal.airline_term
+let g:airline#themes#minimalist#palette.replace.airline_term = g:airline#themes#minimalist#palette.normal.airline_term
+
 " Accents
 let g:airline#themes#minimalist#palette.accents = {
         \ 'red': [ '#D75F5F' , '' , 167 , '' ]
