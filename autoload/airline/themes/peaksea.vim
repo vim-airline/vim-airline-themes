@@ -5,12 +5,12 @@
 " License:      MIT
 
 " Normal Mode
-let s:N1 = [ '#3A3A3A' , '#60F080' , 254 , 237 ]
+let s:N1 = [ '#3A3A3A' , '#C0D8F8' , 254 , 237 ]
 let s:N2 = [ '#E4E4E4' , '#4E4E4E' , 254 , 239 ]
 let s:N3 = [ '#EEEEEE' , '#262626' , 255 , 235 ]
 
 " Insert Mode
-let s:I1 = [ '#3A3A3A' , '#C0D8F8' , 254 , 237 ]
+let s:I1 = [ '#3A3A3A' , '#60F080' , 254 , 237 ]
 let s:I2 = [ '#E4E4E4' , '#4E4E4E' , 254 , 239 ]
 let s:I3 = [ '#EEEEEE' , '#262626' , 255 , 235 ]
 
