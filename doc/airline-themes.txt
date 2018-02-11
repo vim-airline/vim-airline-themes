@@ -104,6 +104,7 @@ Currently this repository contains the following themes:
     * murmur
     * onedark (|airline-theme-onedark|)
     * papercolor
+    * peaksea
     * powerlineish
     * qwq
     * raven
