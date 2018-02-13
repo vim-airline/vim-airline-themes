@@ -10,7 +10,9 @@ let s:cterm_light_gray = 234
 let s:gui_purple = '#d75fff'
 let s:cterm_purple = 171
 let s:gui_red = '#ff5e5e'
-let s:cterm_red = 9
+let s:cterm_red = 167
+let s:gui_green = '#84fba2'
+let s:cterm_green = 120
 
 let g:airline#themes#heman#palette = {}
 
@@ -23,24 +25,24 @@ let g:airline#themes#heman#palette.normal_modified = {
     \ 'airline_c': [ s:gui_red , s:gui_dark_gray , s:cterm_red , s:cterm_dark_gray , '' ],
     \ }
 
-
 " insert mode
-let g:airline#themes#heman#palette.insert = airline#themes#generate_color_map( s:N1 , s:N2 , s:N3 )
-let g:airline#themes#heman#palette.insert_modified = copy( g:airline#themes#angr#palette.normal_modified )
+let s:I1 = [ s:gui_dark_gray , s:gui_green , s:cterm_dark_gray , s:cterm_green ]
+let s:I2 = [ s:gui_dark_gray , s:gui_med_gray_hi , s:cterm_dark_gray , s:cterm_med_gray_hi ]
+let g:airline#themes#heman#palette.insert = airline#themes#generate_color_map( s:I1 , s:I2 , s:N3 )
+let g:airline#themes#heman#palette.insert_modified = copy( g:airline#themes#heman#palette.normal_modified )
 
 " replace mode
-let g:airline#themes#heman#palette.replace = {
-    \ 'airline_a': [ s:gui_dark_gray , s:gui_red , s:cterm_dark_gray , s:cterm_red , '' ],
-    \ 'airline_c': [ s:gui_red , s:gui_dark_gray , s:cterm_red , s:cterm_dark_gray , '' ],
-    \ }
-let g:airline#themes#heman#palette.replace_modified = copy( g:airline#themes#angr#palette.insert_modified )
+let s:R1 = [ s:gui_dark_gray , s:gui_red , s:cterm_dark_gray , s:cterm_red ]
+let s:R2 = [ s:gui_dark_gray , s:gui_med_gray_hi , s:cterm_dark_gray , s:cterm_med_gray_hi ]
+let g:airline#themes#heman#palette.replace = airline#themes#generate_color_map( s:R1 , s:R2 , s:N3 )
+let g:airline#themes#heman#palette.replace_modified = copy( g:airline#themes#heman#palette.insert_modified )
 
 
 " visual mode
 let s:V1 = [ s:gui_dark_gray , s:gui_purple , s:cterm_dark_gray , s:cterm_purple ]
-let s:V3 = [ s:gui_dark_gray , s:gui_med_gray_hi , s:cterm_purple , s:cterm_dark_gray ]
-let g:airline#themes#heman#palette.visual = airline#themes#generate_color_map( s:V1 , s:N2 , s:V3 )
-let g:airline#themes#heman#palette.visual_modified = copy( g:airline#themes#angr#palette.insert_modified )
+let s:V2 = [ s:gui_dark_gray , s:gui_med_gray_hi , s:cterm_dark_gray , s:cterm_med_gray_hi ]
+let g:airline#themes#heman#palette.visual = airline#themes#generate_color_map( s:V1 , s:V2 , s:N3 )
+let g:airline#themes#heman#palette.visual_modified = copy( g:airline#themes#heman#palette.insert_modified )
 
 " inactive window
 let s:IA = [ s:gui_light_gray , s:gui_med_gray_lo , s:cterm_light_gray , s:cterm_med_gray_lo , '' ]
