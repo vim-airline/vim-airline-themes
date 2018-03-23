@@ -7,6 +7,7 @@ function! airline#themes#solarized#refresh()
   let s:background           = get(g:, 'airline_solarized_bg', &background)
   let s:ansi_colors          = get(g:, 'solarized_termcolors', 16) != 256 && &t_Co >= 16 ? 1 : 0
   let s:use_green            = get(g:, 'airline_solarized_normal_green', 0)
+  let s:dark_text            = get(g:, 'airline_solarized_dark_text', 0)
   let s:dark_inactive_border = get(g:, 'airline_solarized_dark_inactive_border', 0)
   let s:tty                  = &t_Co == 8
 
@@ -60,11 +61,11 @@ function! airline#themes#solarized#refresh()
   """"""""""""""""""""""""""""""""""""""""""""""""
   " Normal mode
   if s:background == 'dark'
-    let s:N1 = [s:base3, (s:use_green ? s:green : s:base1), 'bold']
+    let s:N1 = [(s:dark_text ? s:base03 : s:base3), (s:use_green ? s:green : s:base1), 'bold']
     let s:N2 = [s:base2, (s:tty ? s:base01 : s:base00), '']
     let s:N3 = [s:base01, s:base02, '']
   else
-    let s:N1 = [s:base2, (s:use_green ? s:green : s:base00), 'bold']
+    let s:N1 = [(s:dark_text ? s:base03 : s:base2), (s:use_green ? s:green : s:base00), 'bold']
     let s:N2 = [(s:tty ? s:base01 : s:base2), s:base1, '']
     let s:N3 = [s:base1, s:base2, '']
   endif
