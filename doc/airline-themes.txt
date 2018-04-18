@@ -131,21 +131,93 @@ Currently this repository contains the following themes:
 ==============================================================================
 NAME                                         *airline-themes-configuration*
 
-						    *g:airline_theme*
+                                                                *g:airline_theme*
 
 To define a theme to be used by vim-airline you can set the variable
 g:airline_theme in your |.vimrc|  like this: >
     :let g:airline_theme='dark'
 <
-                                                  *airline-theme-dark_minimal*
+*airline-theme-base16*
+------------------------------------------------------------------------------
+Base16 is a popular theme from Chris Kempson
+(https://github.com/chriskempson/base16-vim)
 
+The default theme is base16, all other base16-themes have been generated and
+might not support all options.
+
+                                        *g:airline_base16_improved_contrast*
+
+Improves the contrast for the inactive statusline. To enable it: >
+    let g:airline_base16_improved_contrast = 1
+<
+                                                *airline#themes#base16#constant*
+
+Uses a predefined colorpalette for defining the colors, instead of guessing
+the values from other highlight groups. To enable it: >
+    let g:airline#themes#base16#constant = 1
+<
+                                                  *airline-theme-base16-shell*
+
+base16_shell theme for vim-airline matches your active Base16 Shell theme.
+
+It should be used in combination with Base16 Shell, which sets the correct
+colors in the terminal: (https://github.com/chriskempson/base16-shell). The
+colors used in this theme are within the 21 term colors set by Base16 Shell.
+The theme supports 2 options described below.
+
+                                                *g:airline_base16_solarized*
+
+Adjusts the colors to match base16_solarized shell theme. You may also try to
+use it with other Base16 Shell themes. To enable it: >
+    let g:airline_base16_solarized = 1
+<
+                                                 *airline-theme-base16-tomorrow*
+                                                *airline-theme-base16-oceanicnext*
+
+base16 theme for vim-airline matches your active Base16 colorscheme.
+
+Allow 256 color use of the base16 theme. Without this setting
+the theme may look incorrect in 256 color mode. To enable it: >
+
+    let base16colorspace = 256
+<
+*airline-theme-dark_minimal*
+------------------------------------------------------------------------------
 This is a copy of the dark.vim theme, however it does not change colors in
 the different modes, so should bring some performance improvements because
 airline does not have to redefine highlighting groups after they have been
 setup once. However, it won't change colors if e.g. the mode changes.
 
-                                                  *airline-theme-solarized*
-*g:solarized_base16*
+*airline-theme-deus*
+------------------------------------------------------------------------------
+                                                        *g:deus_termcolors*
+
+Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
+Has no effect if using true/24-bit color. To enable 16-color mode: >
+    let g:onedark_termcolors = 16
+<
+*airline-theme-onedark*
+------------------------------------------------------------------------------
+                                                        *g:onedark_termcolors*
+
+Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
+Has no effect if using true/24-bit color. To enable 16-color mode: >
+
+    let g:onedark_termcolors = 16
+<
+*airline-theme-molokai*
+------------------------------------------------------------------------------
+Enable brighter molokai theme. Mainly, the branch and filetype sections will
+be shown in a nice orange. >
+   let g:airline_molokai_bright = 1
+
+16-color mode is intended to be used with specific terminal colors as
+described in the installation notes for the joshdick/onedark.vim colorscheme:
+(https://github.com/joshdick/onedark.vim#installation)
+
+*airline-theme-solarized*
+------------------------------------------------------------------------------
+                                                        *g:solarized_base16*
 
 Base16 has a Solarized theme with the usual colors, but mapped in the
 terminal differently.  The main difference is that the bright colors,
@@ -174,72 +246,8 @@ Changes inactive window panes to have a dark bottom border instead
 of light by default. To enable it: >
     let g:airline_solarized_dark_inactive_border = 1
 <
-                                                    *airline-theme-base16*
-Base16 is a popular theme from Chris Kempson
-(https://github.com/chriskempson/base16-vim)
-
-The default theme is base16, all other base16-themes have been generated and
-might not support all options.
-
-                                        *g:airline_base16_improved_contrast*
-
-Improves the contrast for the inactive statusline. To enable it: >
-    let g:airline_base16_improved_contrast = 1
-<
-
-                                                *airline#themes#base16#constant*
-
-Uses a predefined colorpalette for defining the colors, instead of guessing
-the values from other highlight groups. To enable it: >
-    let g:airline#themes#base16#constant = 1
-<
-                                                  *airline-theme-base16-shell*
-
-base16_shell theme for vim-airline matches your active Base16 Shell theme.
-
-It should be used in combination with Base16 Shell, which sets the correct
-colors in the terminal: (https://github.com/chriskempson/base16-shell). The
-colors used in this theme are within the 21 term colors set by Base16 Shell.
-The theme supports 2 options described below.
-
-                                                *g:airline_base16_solarized*
-
-Adjusts the colors to match base16_solarized shell theme. You may also try to
-use it with other Base16 Shell themes. To enable it: >
-
-    let g:airline_base16_solarized = 1
-<
-                                                 *airline-theme-base16-tomorrow*
-                                                *airline-theme-base16-oceanicnext*
-
-base16 theme for vim-airline matches your active Base16 colorscheme.
-
-Allow 256 color use of the base16 theme. Without this setting
-the theme may look incorrect in 256 color mode. To enable it: >
-
-    let base16colorspace = 256
-<
-                                                       *airline-theme-onedark*
-*g:onedark_termcolors*
-
-Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
-Has no effect if using true/24-bit color. To enable 16-color mode: >
-
-    let g:onedark_termcolors = 16
-<
-
-16-color mode is intended to be used with specific terminal colors as
-described in the installation notes for the joshdick/onedark.vim colorscheme:
-(https://github.com/joshdick/onedark.vim#installation)
-
-                                                       *airline-theme-deus*
-*g:deus_termcolors*
-
-Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
-Has no effect if using true/24-bit color. To enable 16-color mode: >
-    let g:onedark_termcolors = 16
-<
-                                                       *airline-theme-zenburn*
+*airline-theme-zenburn*
+------------------------------------------------------------------------------
                                                        *g:zenburn_high_Contrast*
 
 Enable higher contrast colors for the zenburn colorscheme and the
@@ -250,12 +258,6 @@ colorscheme >
 The zenburn colorscheme also supports a couple of other configuration
 variables, that possibly also influence the colors in the zenburn airline
 theme. Please check the zenburn color scheme on how to configure it.
-
-                                                        *airline-theme-molokai*
-Enable brighter molokai theme. Mainly, the branch and filetype sections will
-be shown in a nice orange. >
-   let g:airline_molokai_bright = 1
-
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
