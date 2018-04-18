@@ -156,19 +156,19 @@ Base16 Shell.  To enable it: >
 >
 See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
 
-*g:airline_solarized_normal_green*
+                                                *g:airline_solarized_normal_green*
 
 Turns the outer-most section of the statusline Solarized green, making it
 look more like classic powerline in normal mode. To enable it: >
     let g:airline_solarized_normal_green = 1
 <
-*g:airline_solarized_dark_text*
+                                                *g:airline_solarized_dark_text*
 
 Turns the text color of the outer-most sections of the statusline to be dark. 
 To enable it: >
     let g:airline_solarized_dark_text = 1
 <
-*g:airline_solarized_dark_inactive_border*
+                                        *g:airline_solarized_dark_inactive_border*
 
 Changes inactive window panes to have a dark bottom border instead
 of light by default. To enable it: >
@@ -181,13 +181,13 @@ Base16 is a popular theme from Chris Kempson
 The default theme is base16, all other base16-themes have been generated and
 might not support all options.
 
-*g:airline_base16_improved_contrast*
+                                        *g:airline_base16_improved_contrast*
 
 Improves the contrast for the inactive statusline. To enable it: >
     let g:airline_base16_improved_contrast = 1
 <
 
-*airline#themes#base16#constant*
+                                                *airline#themes#base16#constant*
 
 Uses a predefined colorpalette for defining the colors, instead of guessing
 the values from other highlight groups. To enable it: >
@@ -202,7 +202,7 @@ colors in the terminal: (https://github.com/chriskempson/base16-shell). The
 colors used in this theme are within the 21 term colors set by Base16 Shell.
 The theme supports 2 options described below.
 
-*g:airline_base16_solarized*
+                                                *g:airline_base16_solarized*
 
 Adjusts the colors to match base16_solarized shell theme. You may also try to
 use it with other Base16 Shell themes. To enable it: >
@@ -240,7 +240,7 @@ Has no effect if using true/24-bit color. To enable 16-color mode: >
     let g:onedark_termcolors = 16
 <
                                                        *airline-theme-zenburn*
-*g:zenburn_high_Contrast*
+                                                       *g:zenburn_high_Contrast*
 
 Enable higher contrast colors for the zenburn colorscheme and the
 corresponding airline theme. Must be set before switching to the zenburn
@@ -250,6 +250,12 @@ colorscheme >
 The zenburn colorscheme also supports a couple of other configuration
 variables, that possibly also influence the colors in the zenburn airline
 theme. Please check the zenburn color scheme on how to configure it.
+
+                                                        *airline-theme-molokai*
+Enable brighter molokai theme. Mainly, the branch and filetype sections will
+be shown in a nice orange. >
+   let g:airline_molokai_bright = 1
+
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
