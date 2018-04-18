@@ -134,7 +134,6 @@ NAME                                         *airline-themes-configuration*
 
 To define a theme to be used by vim-airline you can set the variable
 g:airline_theme in your |.vimrc|  like this: >
-
     :let g:airline_theme='dark'
 <
                                                   *airline-theme-dark_minimal*
@@ -151,8 +150,7 @@ Base16 has a Solarized theme with the usual colors, but mapped in the
 terminal differently.  The main difference is that the bright colors,
 Ansi 9-15, are left the same as their Ansi 1-7 counterparts.  The
 remaining solarized colors are mapped into higher indexes by using
-Base16 Shell.  To enable it:
->
+Base16 Shell.  To enable it: >
     let g:solarized_base16 = 1
 >
 See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
@@ -160,22 +158,19 @@ See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
 *g:airline_solarized_normal_green*
 
 Turns the outer-most section of the statusline Solarized green, making it
-look more like classic powerline in normal mode. To enable it:
->
+look more like classic powerline in normal mode. To enable it: >
     let g:airline_solarized_normal_green = 1
 <
 *g:airline_solarized_dark_text*
 
 Turns the text color of the outer-most sections of the statusline to be dark. 
-To enable it:
->
+To enable it: >
     let g:airline_solarized_dark_text = 1
 <
 *g:airline_solarized_dark_inactive_border*
 
 Changes inactive window panes to have a dark bottom border instead
-of light by default. To enable it:
->
+of light by default. To enable it: >
     let g:airline_solarized_dark_inactive_border = 1
 <
                                                     *airline-theme-base16*
@@ -188,7 +183,6 @@ might not support all options.
 *g:airline_base16_improved_contrast*
 
 Improves the contrast for the inactive statusline. To enable it: >
-
     let g:airline_base16_improved_contrast = 1
 <
 
@@ -196,7 +190,6 @@ Improves the contrast for the inactive statusline. To enable it: >
 
 Uses a predefined colorpalette for defining the colors, instead of guessing
 the values from other highlight groups. To enable it: >
-
     let g:airline#themes#base16#constant = 1
 <
                                                   *airline-theme-base16-shell*
@@ -226,7 +219,6 @@ the theme may look incorrect in 256 color mode. To enable it: >
     let base16colorspace = 256
 <
                                                        *airline-theme-onedark*
-
 *g:onedark_termcolors*
 
 Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
@@ -240,14 +232,23 @@ described in the installation notes for the joshdick/onedark.vim colorscheme:
 (https://github.com/joshdick/onedark.vim#installation)
 
                                                        *airline-theme-deus*
-
 *g:deus_termcolors*
 
 Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
 Has no effect if using true/24-bit color. To enable 16-color mode: >
-
     let g:onedark_termcolors = 16
 <
+                                                       *airline-theme-zenburn*
+*g:zenburn_high_Contrast*
+
+Enable higher contrast colors for the zenburn colorscheme and the
+corresponding airline theme. Must be set before switching to the zenburn
+colorscheme >
+    let g:zenburn_high_Contrast = 1
+
+The zenburn colorscheme also supports a couple of other configuration
+variables, that possibly also influence the colors in the zenburn airline
+theme. Please check the zenburn color scheme on how to configure it.
 ==============================================================================
 CONTRIBUTIONS                                *airline-themes-contributions*
 
