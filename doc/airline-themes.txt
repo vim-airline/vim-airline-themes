@@ -63,6 +63,7 @@ Currently this repository contains the following themes:
     * base16_marrakesh
     * base16_mocha
     * base16_monokai
+    * base16_nord
     * base16_ocean
     * base16_oceanicnext (|airline-theme-base16-oceanicnext|)
     * base16_paraiso
