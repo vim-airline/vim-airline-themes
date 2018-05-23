@@ -179,7 +179,6 @@ base16 theme for vim-airline matches your active Base16 colorscheme.
 
 Allow 256 color use of the base16 theme. Without this setting
 the theme may look incorrect in 256 color mode. To enable it: >
-
     let base16colorspace = 256
 <
 *airline-theme-dark_minimal*
@@ -195,7 +194,7 @@ setup once. However, it won't change colors if e.g. the mode changes.
 
 Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
 Has no effect if using true/24-bit color. To enable 16-color mode: >
-    let g:onedark_termcolors = 16
+    let g:deus_termcolors = 16
 <
 *airline-theme-onedark*
 ------------------------------------------------------------------------------
@@ -203,19 +202,18 @@ Has no effect if using true/24-bit color. To enable 16-color mode: >
 
 Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
 Has no effect if using true/24-bit color. To enable 16-color mode: >
-
     let g:onedark_termcolors = 16
 <
+16-color mode is intended to be used with specific terminal colors as
+described in the installation notes for the joshdick/onedark.vim colorscheme:
+(https://github.com/joshdick/onedark.vim#installation)
+
 *airline-theme-molokai*
 ------------------------------------------------------------------------------
 Enable brighter molokai theme. Mainly, the branch and filetype sections will
 be shown in a nice orange. >
    let g:airline_molokai_bright = 1
-
-16-color mode is intended to be used with specific terminal colors as
-described in the installation notes for the joshdick/onedark.vim colorscheme:
-(https://github.com/joshdick/onedark.vim#installation)
-
+<
 *airline-theme-solarized*
 ------------------------------------------------------------------------------
                                                         *g:solarized_base16*
@@ -224,9 +222,9 @@ Base16 has a Solarized theme with the usual colors, but mapped in the
 terminal differently.  The main difference is that the bright colors,
 Ansi 9-15, are left the same as their Ansi 1-7 counterparts.  The
 remaining solarized colors are mapped into higher indexes by using
-Base16 Shell.  To enable it: >
+Base16 Shell. To enable it: >
     let g:solarized_base16 = 1
->
+<
 See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
 
                                                 *g:airline_solarized_normal_green*
