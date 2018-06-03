@@ -118,6 +118,7 @@ Currently this repository contains the following themes:
     * soda
     * sol
     * solarized (|airline-theme-solarized|)
+    * solarized_flood
     * term
     * term_light
     * tomorrow
