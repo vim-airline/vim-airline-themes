@@ -56,6 +56,9 @@ function! airline#themes#{s:theme}#refresh()
     let palette.normal.airline_warning = WI
     let palette.normal.airline_term    = TE
 
+    let palette.insert   = palette.normal
+    let palette.replace  = palette.normal
+    let palette.visual   = palette.normal
     let palette.inactive = airline#themes#generate_color_map(IA, IA, IA)
 
     if s:want_showmod
