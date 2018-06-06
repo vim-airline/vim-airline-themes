@@ -7,6 +7,10 @@
 
 let s:theme = 'minimalist'
 
+" To highlight when the buffer is modified:
+"     let g:airline_minimalist_showmod = 1
+let s:want_showmod = get(g:, 'airline_minimalist_showmod', 0)
+
 function! airline#themes#{s:theme}#refresh()
     if &background == "dark"
         " Normal
@@ -53,6 +57,10 @@ function! airline#themes#{s:theme}#refresh()
     let palette.normal.airline_term    = TE
 
     let palette.inactive = airline#themes#generate_color_map(IA, IA, IA)
+
+    if s:want_showmod
+        let palette.normal_modified = { 'airline_a': NR, 'airline_z': NR }
+    endif
 
     " Accents
     let palette.accents = {

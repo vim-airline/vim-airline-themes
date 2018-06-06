@@ -99,7 +99,7 @@ Currently this repository contains the following themes:
     * light
     * lucius
     * luna
-    * minimalist
+    * minimalist (|airline-theme-minimalist|)
     * molokai
     * monochrome
     * murmur
@@ -196,6 +196,13 @@ setup once. However, it won't change colors if e.g. the mode changes.
 Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
 Has no effect if using true/24-bit color. To enable 16-color mode: >
     let g:deus_termcolors = 16
+
+*airline-theme-minimalist*
+------------------------------------------------------------------------------
+                                             *g:airline_minimalist_showmod*
+
+Highlight when the buffer is modified.
+    let g:airline_minimalist_showmod = 1
 <
 *airline-theme-onedark*
 ------------------------------------------------------------------------------
