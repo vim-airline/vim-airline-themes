@@ -1,5 +1,5 @@
 " Name: Solarized Flood
-" Changed: June 3 2018
+" Changed: June 13 2018
 " Maintainer: https://github.com/Neur1n
 " Description:
 "   A vim-airline theme made based on and tested with the Solarized colorscheme
@@ -50,18 +50,19 @@ let s:green   = {'hex': '#859900', 'term': 106}  " 133, 153,   0 #
 
 let g:airline#themes#solarized_flood#palette = {}
 
+let s:style = get(g:, 'solarized_flood_nv_mode_style', 'NONE')
 
 " *****************************************************************************
 "                                                                   Normal Mode
 " *****************************************************************************
 let s:airline_a_normal = [s:base03['hex'],  s:green['hex'],
-                        \ s:base03['term'], s:green['term'], 'italic']
+                        \ s:base03['term'], s:green['term'], s:style]
 
 let s:airline_b_normal = [s:base1['hex'],  s:base03['hex'],
-                        \ s:base1['term'], s:base03['term'], 'italic']
+                        \ s:base1['term'], s:base03['term'], s:style]
 
 let s:airline_c_normal = [s:cyan['hex'],  s:base03['hex'],
-                        \ s:cyan['term'], s:base03['term'], 'italic']
+                        \ s:cyan['term'], s:base03['term'], s:style]
 
 let g:airline#themes#solarized_flood#palette.normal =
       \ airline#themes#generate_color_map(s:airline_a_normal,
@@ -70,12 +71,17 @@ let g:airline#themes#solarized_flood#palette.normal =
 
 let g:airline#themes#solarized_flood#palette.normal['airline_z'] =
       \ [s:green['hex'], s:base03['hex'], s:green['term'], s:base03['term'],
-       \ 'italic']
+       \ s:style]
 
-let g:airline#themes#solarized_flood#palette.normal_modified = {
-      \ 'airline_c': [s:magenta['hex'], s:base03['hex'],
-                    \ s:magenta['term'], s:base03['term'], 'italic'],
-      \ }
+if get(g:, 'solarized_flood_dam', 0)
+    let g:airline#themes#solarized_flood#palette.normal_modified = {
+          \ 'airline_c': [s:base03['hex'], s:magenta['hex'],
+                        \ s:base03['term'], s:magenta['term'], s:style]}
+else
+    let g:airline#themes#solarized_flood#palette.normal_modified = {
+          \ 'airline_c': [s:magenta['hex'], s:base03['hex'],
+                        \ s:magenta['term'], s:base03['term'], s:style]}
+endif
 
 " *****************************************************************************
 "                                                                   Insert Mode
@@ -98,15 +104,19 @@ let g:airline#themes#solarized_flood#palette.insert['airline_z'] =
       \ [s:cyan['hex'], s:base03['hex'], s:cyan['term'], s:base03['term'],
        \ 'bold']
 
-let g:airline#themes#solarized_flood#palette.insert_modified = {
-      \ 'airline_c': [s:magenta['hex'],  s:base03['hex'],
-                    \ s:magenta['term'], s:base03['term'], 'bold'],
-      \ }
+if get(g:, 'solarized_flood_dam', 0)
+    let g:airline#themes#solarized_flood#palette.insert_modified = {
+          \ 'airline_c': [s:base03['hex'],  s:magenta['hex'],
+                        \ s:magenta['term'], s:base03['term'], 'bold']}
+else
+    let g:airline#themes#solarized_flood#palette.insert_modified = {
+          \ 'airline_c': [s:magenta['hex'],  s:base03['hex'],
+                        \ s:magenta['term'], s:base03['term'], 'bold']}
+endif
 
 let g:airline#themes#solarized_flood#palette.insert_paste = {
       \ 'airline_a': [s:base03['hex'],  s:orange['hex'],
-                    \ s:base03['term'], s:orange['term'], 'bold'],
-      \ }
+                    \ s:base03['term'], s:orange['term'], 'bold']}
 
 " *****************************************************************************
 "                                                                  Replace Mode
@@ -124,13 +134,13 @@ let g:airline#themes#solarized_flood#palette.replace_modified =
 "                                                                   Visual Mode
 " *****************************************************************************
 let s:airline_a_visual = [s:base03['hex'],  s:yellow['hex'],
-                        \ s:base03['term'], s:yellow['term'], 'italic']
+                        \ s:base03['term'], s:yellow['term'], s:style]
 
 let s:airline_b_visual = [s:base1['hex'],  s:base03['hex'],
-                        \ s:base1['term'], s:base03['term'], 'italic']
+                        \ s:base1['term'], s:base03['term'], s:style]
 
 let s:airline_c_visual = [s:red['hex'],  s:base03['hex'],
-                        \ s:red['term'], s:base03['term'], 'italic']
+                        \ s:red['term'], s:base03['term'], s:style]
 
 let g:airline#themes#solarized_flood#palette.visual =
       \ airline#themes#generate_color_map(s:airline_a_visual,
@@ -139,36 +149,35 @@ let g:airline#themes#solarized_flood#palette.visual =
 
 let g:airline#themes#solarized_flood#palette.visual['airline_z'] =
       \ [s:yellow['hex'], s:base03['hex'], s:yellow['term'], s:base03['term'],
-       \ 'italic']
+       \ 'NONE']
 
-let g:airline#themes#solarized_flood#palette.visual_modified = {
-      \ 'airline_c': [s:magenta['hex'],  s:base03['hex'],
-                    \ s:magenta['term'], s:base03['term'], 'italic'],
-      \ }
+if get(g:, 'solarized_flood_dam', 0)
+    let g:airline#themes#solarized_flood#palette.visual_modified = {
+          \ 'airline_c': [s:base03['hex'],  s:magenta['hex'],
+                        \ s:magenta['term'], s:base03['term'], s:style]
+          \ }
+else
+    let g:airline#themes#solarized_flood#palette.visual_modified = {
+          \ 'airline_c': [s:magenta['hex'],  s:base03['hex'],
+                        \ s:magenta['term'], s:base03['term'], s:style]
+          \ }
+endif
 
 " *****************************************************************************
 "                                                                 Inactive Mode
 " *****************************************************************************
-let s:airline_a_inactive = ['#4e4e4e', '#1c1c1c', 239, 234, '']
-let s:airline_b_inactive = ['#4e4e4e', '#262626', 239, 235, '']
-let s:airline_c_inactive = ['#4e4e4e', '#303030', 239, 236, '']
+let s:airline_a_inactive = ['#4e4e4e', '#1c1c1c', 239, 234, 'bold']
+let s:airline_b_inactive = ['#4e4e4e', '#262626', 239, 235, 'bold']
+let s:airline_c_inactive = ['#4e4e4e', '#303030', 239, 236, 'bold']
 let g:airline#themes#solarized_flood#palette.inactive =
       \ airline#themes#generate_color_map(s:airline_a_inactive,
                                         \ s:airline_b_inactive,
                                         \ s:airline_c_inactive)
 let g:airline#themes#solarized_flood#palette.inactive_modified = {
-      \ 'airline_c': ['#875faf', '', 97, '', ''] ,
+      \ 'airline_c': ['#875faf', '', 97, '', 'bold'] ,
       \ }
 
 
 let g:airline#themes#solarized_flood#palette.accents = {
-      \ 'red': [s:red['hex'], '', s:red['term'], '']
+      \ 'red': [s:red['hex'], '', s:red['term'], 'bold']
       \ }
-
-
-if get(g:, 'loaded_ctrlp', 0)
-  let g:airline#themes#solarized_flood#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
-        \ [ '#d7d7ff', '#5f00af', 189, 55 , ''    ],
-        \ [ '#ffffff', '#875fd7', 231, 98 , ''    ],
-        \ [ '#5f00af', '#ffffff', 55 , 231, 'bold'])
-endif
