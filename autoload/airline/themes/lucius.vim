@@ -12,9 +12,13 @@ function! airline#themes#lucius#refresh()
                 \ 'airline_c': [modified_group[0], '', modified_group[2], '', '']
                 \ }
 
-    let warning_group = airline#themes#get_highlight('DiffDelete')
+    let warning_group = airline#themes#get_highlight('DiffChange')
     let g:airline#themes#lucius#palette.normal.airline_warning = warning_group
     let g:airline#themes#lucius#palette.normal_modified.airline_warning = warning_group
+
+    let error_group = airline#themes#get_highlight('DiffDelete')
+    let g:airline#themes#lucius#palette.normal.airline_error = error_group
+    let g:airline#themes#lucius#palette.normal_modified.airline_error = error_group
 
     let s:I1 = airline#themes#get_highlight('DiffAdd')
     let s:I2 = s:N2
@@ -23,6 +27,8 @@ function! airline#themes#lucius#refresh()
     let g:airline#themes#lucius#palette.insert_modified = g:airline#themes#lucius#palette.normal_modified
     let g:airline#themes#lucius#palette.insert.airline_warning = g:airline#themes#lucius#palette.normal.airline_warning
     let g:airline#themes#lucius#palette.insert_modified.airline_warning = g:airline#themes#lucius#palette.normal_modified.airline_warning
+    let g:airline#themes#lucius#palette.insert.airline_error = g:airline#themes#lucius#palette.normal.airline_error
+    let g:airline#themes#lucius#palette.insert_modified.airline_error = g:airline#themes#lucius#palette.normal_modified.airline_error
 
     let s:R1 = airline#themes#get_highlight('DiffChange')
     let s:R2 = s:N2
@@ -31,6 +37,8 @@ function! airline#themes#lucius#refresh()
     let g:airline#themes#lucius#palette.replace_modified = g:airline#themes#lucius#palette.normal_modified
     let g:airline#themes#lucius#palette.replace.airline_warning = g:airline#themes#lucius#palette.normal.airline_warning
     let g:airline#themes#lucius#palette.replace_modified.airline_warning = g:airline#themes#lucius#palette.normal_modified.airline_warning
+    let g:airline#themes#lucius#palette.replace.airline_error = g:airline#themes#lucius#palette.normal.airline_error
+    let g:airline#themes#lucius#palette.replace_modified.airline_error = g:airline#themes#lucius#palette.normal_modified.airline_error
 
     let s:V1 = airline#themes#get_highlight('Cursor')
     let s:V2 = s:N2
@@ -39,6 +47,8 @@ function! airline#themes#lucius#refresh()
     let g:airline#themes#lucius#palette.visual_modified = g:airline#themes#lucius#palette.normal_modified
     let g:airline#themes#lucius#palette.visual.airline_warning = g:airline#themes#lucius#palette.normal.airline_warning
     let g:airline#themes#lucius#palette.visual_modified.airline_warning = g:airline#themes#lucius#palette.normal_modified.airline_warning
+    let g:airline#themes#lucius#palette.visual.airline_error = g:airline#themes#lucius#palette.normal.airline_error
+    let g:airline#themes#lucius#palette.visual_modified.airline_error = g:airline#themes#lucius#palette.normal_modified.airline_error
 
     let s:IA = airline#themes#get_highlight('StatusLineNC')
     let g:airline#themes#lucius#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
@@ -59,4 +69,3 @@ function! airline#themes#lucius#refresh()
 endfunction
 
 call airline#themes#lucius#refresh()
-
