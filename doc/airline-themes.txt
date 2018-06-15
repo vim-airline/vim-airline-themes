@@ -118,7 +118,7 @@ Currently this repository contains the following themes:
     * soda
     * sol
     * solarized (|airline-theme-solarized|)
-    * solarized_flood
+    * solarized_flood (|airline-theme-solarized_flood|)
     * term
     * term_light
     * tomorrow
@@ -252,6 +252,26 @@ To enable it: >
 Changes inactive window panes to have a dark bottom border instead
 of light by default. To enable it: >
     let g:airline_solarized_dark_inactive_border = 1
+<
+*airline-theme-solarized_flood*
+------------------------------------------------------------------------------
+                                               *g:solarized_flood_nv_mode_style*
+
+An option to customize the font style of seciton c when in normal and visual
+mode, since the previous mandatory 'italic' style sometimes causes glitches on
+the statusline. Currently the default is: >
+    let g:solarized_flood_nv_mode_style = 'NONE'
+
+More styles can be found with ':help attr-list'.
+
+                                                         *g:solarized_flood_dam*
+
+Now lets bulid a dam to stop the flood! The default highlighting for 'modified'
+mode could be inconspicuous that one should actually move an eye on the
+statusline to tell if a buffer is modified. Enabling the 'dam' will inverse the
+highlighting and the whole section c will be highlighted which makes it more
+obivous after a buffer is modified. To enable it: >
+    let g:solarized_flood_dam = 1 (default: 0)
 <
 *airline-theme-zenburn*
 ------------------------------------------------------------------------------
