@@ -103,6 +103,7 @@ Currently this repository contains the following themes:
     * molokai
     * monochrome
     * murmur
+    * night_owl
     * onedark (|airline-theme-onedark|)
     * papercolor
     * peaksea
