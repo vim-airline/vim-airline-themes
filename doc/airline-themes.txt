@@ -86,6 +86,7 @@ Currently this repository contains the following themes:
     * dark_minimal
     * deus
     * distinguished
+    * dracula
     * durant
     * faryfloss
     * hybrid
