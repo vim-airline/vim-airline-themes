@@ -33,6 +33,7 @@ Currently this repository contains the following themes:
     * badcat
     * badwolf
     * base16 (|airline-theme-base16|)
+    * base16_vim (|airline-theme-base16_vim|)
     * base16_shell (|airline-theme-base16_shell|)
     * base16_3024
     * base16_apathy
@@ -65,7 +66,7 @@ Currently this repository contains the following themes:
     * base16_monokai
     * base16_nord
     * base16_ocean
-    * base16_oceanicnext (|airline-theme-base16-oceanicnext|)
+    * base16_oceanicnext
     * base16_paraiso
     * base16_pop
     * base16_railscasts
@@ -74,8 +75,9 @@ Currently this repository contains the following themes:
     * base16_solarized
     * base16_spacemacs
     * base16_summerfruit
-    * base16_tomorrow (|airline-theme-base16_tomorrow|)
+    * base16_tomorrow
     * base16_twilight
+    * base16_vim
     * base16color
     * behelit
     * biogoo
@@ -141,49 +143,53 @@ To define a theme to be used by vim-airline you can set the variable
 g:airline_theme in your |.vimrc|  like this: >
     :let g:airline_theme='dark'
 <
-*airline-theme-base16*
+*airline-theme-base16_vim*
+*airline-theme-base16_shell*
 ------------------------------------------------------------------------------
-Base16 is a popular theme from Chris Kempson
-(https://github.com/chriskempson/base16-vim)
+Base16 is an extensive collection of colorschemes built on a common
+architecture by Chris Kempson (http://chriskempson.com/projects/base16/). The
+base16_vim airline theme integrates with the base16-vim plugin
+(https://github.com/chriskempson/base16-vim) to match the currently selected
+colorscheme. This works with all modes of using base16-vim: running vim in
+a terminal configured with base16-shell
+(https://github.com/chriskempson/base16-shell), running vim with
+'termguicolors' set, or running gvim.
 
-The default theme is base16, all other base16-themes have been generated and
-might not support all options.
+The alias base16_shell is provided for backward compatibility.
+
+This theme provides two options:
 
                                         *g:airline_base16_improved_contrast*
 
-Improves the contrast for the inactive statusline. To enable it: >
+Improve the contrast for the inactive statusline. >
     let g:airline_base16_improved_contrast = 1
-<
-                                                *airline#themes#base16#constant*
-
-Uses a predefined colorpalette for defining the colors, instead of guessing
-the values from other highlight groups. To enable it: >
-    let g:airline#themes#base16#constant = 1
-<
-                                                  *airline-theme-base16-shell*
-
-base16_shell theme for vim-airline matches your active Base16 Shell theme.
-
-It should be used in combination with Base16 Shell, which sets the correct
-colors in the terminal: (https://github.com/chriskempson/base16-shell). The
-colors used in this theme are within the 21 term colors set by Base16 Shell.
-The theme supports 2 options described below.
-
+Default: 0
+                                                *g:airline_base16_monotone*
                                                 *g:airline_base16_solarized*
 
-Adjusts the colors to match base16_solarized shell theme. You may also try to
-use it with other Base16 Shell themes. To enable it: >
-    let g:airline_base16_solarized = 1
-<
-                                                 *airline-theme-base16-tomorrow*
-                                                *airline-theme-base16-oceanicnext*
+Adjust the theme for a more monotonic look. This option is designed with the
+base16-solarized-(light|dark) colorschemes in mind, but work well with the
+other base16 colorshemes as well. >
+    let g:airline_base16_monotone = 1
+or, >
+    let g:airline_base16_solarized = 1  " retained for backward compatibility
+Default: 0
 
-base16 theme for vim-airline matches your active Base16 colorscheme.
+*airline-theme-base16*
+------------------------------------------------------------------------------
+This theme matches base16 colorschemes by extracting colors from highlight
+groups, and also provides a static option.
 
-Allow 256 color use of the base16 theme. Without this setting
-the theme may look incorrect in 256 color mode. To enable it: >
-    let base16colorspace = 256
-<
+                                                *airline#themes#base16#constant*
+
+Use a predefined palette instead of guessing values from highlight groups. To
+enable: >
+    let g:airline#themes#base16#constant = 1
+Default: 0
+
+A number of static themes that match particular base16 colorschemes are also
+available, see |airline-themes-list|.
+
 *airline-theme-dark_minimal*
 ------------------------------------------------------------------------------
 This is a copy of the dark.vim theme, however it does not change colors in
@@ -226,17 +232,6 @@ be shown in a nice orange. >
 <
 *airline-theme-solarized*
 ------------------------------------------------------------------------------
-                                                        *g:solarized_base16*
-
-Base16 has a Solarized theme with the usual colors, but mapped in the
-terminal differently.  The main difference is that the bright colors,
-Ansi 9-15, are left the same as their Ansi 1-7 counterparts.  The
-remaining solarized colors are mapped into higher indexes by using
-Base16 Shell. To enable it: >
-    let g:solarized_base16 = 1
-<
-See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
-
                                                 *g:airline_solarized_normal_green*
 
 Turns the outer-most section of the statusline Solarized green, making it
@@ -255,6 +250,17 @@ Changes inactive window panes to have a dark bottom border instead
 of light by default. To enable it: >
     let g:airline_solarized_dark_inactive_border = 1
 <
+                                                        *g:solarized_base16*
+
+Base16 has a Solarized theme with the usual colors, but mapped in the
+terminal differently.  The main difference is that the bright colors,
+Ansi 9-15, are left the same as their Ansi 1-7 counterparts.  The
+remaining solarized colors are mapped into higher indexes by using
+Base16 Shell. To enable it: >
+    let g:solarized_base16 = 1
+<
+See also https://github.com/blueyed/vim-colors-solarized/commit/92f2f994.
+
 *airline-theme-zenburn*
 ------------------------------------------------------------------------------
                                                        *g:zenburn_high_Contrast*
