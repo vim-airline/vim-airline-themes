@@ -36,6 +36,7 @@ Currently this repository contains the following themes:
     * base16_vim (|airline-theme-base16_vim|)
     * base16_shell (|airline-theme-base16_shell|)
     * base16_3024
+    * base16_adwaita
     * base16_apathy
     * base16_ashes
     * base16_atelierdune
