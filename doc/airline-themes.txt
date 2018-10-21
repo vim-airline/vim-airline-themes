@@ -109,6 +109,7 @@ Currently this repository contains the following themes:
     * murmur
     * night_owl
     * onedark (|airline-theme-onedark|)
+    * ouo
     * papercolor
     * peaksea
     * powerlineish
