@@ -90,6 +90,16 @@ let g:airline#themes#dracula#palette.insert_modified = airline#themes#generate_c
 let g:airline#themes#dracula#palette.replace_modified = airline#themes#generate_color_map(s:R1, s:R2, s:changed)
 let g:airline#themes#dracula#palette.visual_modified = airline#themes#generate_color_map(s:V1, s:V2, s:changed)
 
+let g:airline#themes#dracula#palette.normal_modified.airline_warning = s:WARNING
+let g:airline#themes#dracula#palette.insert_modified.airline_warning = s:WARNING
+let g:airline#themes#dracula#palette.visual_modified.airline_warning = s:WARNING
+let g:airline#themes#dracula#palette.replace_modified.airline_warning = s:WARNING
+
+let g:airline#themes#dracula#palette.normal_modified.airline_error = s:ERROR
+let g:airline#themes#dracula#palette.insert_modified.airline_error = s:ERROR
+let g:airline#themes#dracula#palette.visual_modified.airline_error = s:ERROR
+let g:airline#themes#dracula#palette.replace_modified.airline_error = s:ERROR
+
 " CtrlP
 if !get(g:, 'loaded_ctrlp', 0)
   finish
