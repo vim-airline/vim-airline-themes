@@ -10,9 +10,9 @@ function! airline#themes#monochrome#refresh()
   let g:airline#themes#monochrome#palette.visual = g:airline#themes#monochrome#palette.normal
   let g:airline#themes#monochrome#palette.normal.airline_error   = s:SLNC
   let g:airline#themes#monochrome#palette.normal.airline_warning = s:SLNC
+  let g:airline#themes#monochrome#palette.normal.airline_term    = s:SL
 
   let g:airline#themes#monochrome#palette.inactive = airline#themes#generate_color_map(s:SLNC, s:SLNC, s:SLNC)
 endfunction
 
 call airline#themes#monochrome#refresh()
-
