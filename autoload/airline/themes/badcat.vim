@@ -74,9 +74,9 @@ if !get(g:, 'loaded_ctrlp', 0)
   finish
 endif
 
-let s:CP1 = [ s:guiWhite , s:gui01 , s:ctermWhite , s:ctermGray  ]
-let s:CP2 = [ s:guiWhite , s:gui03 , s:ctermWhite , s:ctermGray  ]
-let s:CP3 = [ s:guiWhite , s:gui0D , s:ctermWhite , s:ctermBlack ]
+let s:CP1 = [ s:guiWhite , s:guiGray , s:ctermWhite , s:ctermGray  ]
+let s:CP2 = [ s:guiWhite , s:guiGray , s:ctermWhite , s:ctermGray  ]
+let s:CP3 = [ s:guiWhite , s:guiBlack , s:ctermWhite , s:ctermBlack ]
 
 let g:airline#themes#badcat#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(s:CP1, s:CP2, s:CP3)
 " }}}
