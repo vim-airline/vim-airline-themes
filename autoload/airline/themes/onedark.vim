@@ -34,7 +34,7 @@ function! airline#themes#onedark#refresh()
 
   let s:N1 = [ '#282C34', '#98C379', s:term_black, s:term_green ]
   let s:N2 = [ '#ABB2BF', '#3E4452', s:term_white, s:term_grey ]
-  let s:N3 = [ '#98C379', '#282C34', s:term_green, '' ]
+  let s:N3 = [ '#98C379', '#282C34', s:term_green, s:term_grey ]
   let g:airline#themes#onedark#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
   let group = airline#themes#get_highlight('vimCommand')
@@ -44,13 +44,13 @@ function! airline#themes#onedark#refresh()
 
   let s:I1 = [ '#282C34', '#61AFEF', s:term_black, s:term_blue ]
   let s:I2 = s:N2
-  let s:I3 = [ '#61AFEF', '#282C34', s:term_blue, '' ]
+  let s:I3 = [ '#61AFEF', '#282C34', s:term_blue, s:term_grey ]
   let g:airline#themes#onedark#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
   let g:airline#themes#onedark#palette.insert_modified = g:airline#themes#onedark#palette.normal_modified
 
   let s:R1 = [ '#282C34', '#E06C75', s:term_black, s:term_red ]
   let s:R2 = s:N2
-  let s:R3 = [ '#E06C75', '#282C34', s:term_red, '' ]
+  let s:R3 = [ '#E06C75', '#282C34', s:term_red, s:term_grey ]
   let g:airline#themes#onedark#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
   let g:airline#themes#onedark#palette.replace_modified = g:airline#themes#onedark#palette.normal_modified
 
