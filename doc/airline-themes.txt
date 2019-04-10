@@ -29,7 +29,9 @@ Currently this repository contains the following themes:
     * angr
     * atomic
     * aurora
+    * ayu_light
     * ayu_mirage
+    * ayu_dark
     * badcat
     * badwolf
     * base16 (|airline-theme-base16|)
