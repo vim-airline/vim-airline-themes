@@ -16,7 +16,7 @@ before_script: |
   find $PWD/autoload/airline/themes -name "*.vim" > themes.txt
 
 script: |
-  vim -Nu <(cat << VIMRC
+  vim --not-a-term -Nu <(cat << VIMRC
   filetype off
   set rtp+=vader.vim
   set rtp+=vim-airline
