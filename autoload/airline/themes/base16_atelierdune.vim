@@ -1,22 +1,22 @@
 " vim-airline template by chartoin (http://github.com/chartoin)
 " Base 16 Atelier Dune Scheme by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/dune)
 let g:airline#themes#base16_atelierdune#palette = {}
-let s:gui00 = "#20201d"
-let s:gui01 = "#292824"
-let s:gui02 = "#6e6b5e"
-let s:gui03 = "#7d7a68"
-let s:gui04 = "#999580"
-let s:gui05 = "#a6a28c"
-let s:gui06 = "#e8e4cf"
-let s:gui07 = "#fefbec"
-let s:gui08 = "#d73737"
-let s:gui09 = "#b65611"
-let s:gui0A = "#cfb017"
-let s:gui0B = "#60ac39"
-let s:gui0C = "#1fad83"
-let s:gui0D = "#6684e1"
-let s:gui0E = "#b854d4"
-let s:gui0F = "#d43552"
+let s:gui00 = '#20201d'
+let s:gui01 = '#292824'
+let s:gui02 = '#6e6b5e'
+let s:gui03 = '#7d7a68'
+let s:gui04 = '#999580'
+let s:gui05 = '#a6a28c'
+let s:gui06 = '#e8e4cf'
+let s:gui07 = '#fefbec'
+let s:gui08 = '#d73737'
+let s:gui09 = '#b65611'
+let s:gui0A = '#cfb017'
+let s:gui0B = '#60ac39'
+let s:gui0C = '#1fad83'
+let s:gui0D = '#6684e1'
+let s:gui0E = '#b854d4'
+let s:gui0F = '#d43552'
 
 let s:cterm00 = 0
 let s:cterm01 = 0
@@ -71,3 +71,9 @@ let g:airline#themes#base16_atelierdune#palette.ctrlp = airline#extensions#ctrlp
       \ [ s:gui07, s:gui02, s:cterm07, s:cterm02, '' ],
       \ [ s:gui07, s:gui04, s:cterm07, s:cterm04, '' ],
       \ [ s:gui05, s:gui01, s:cterm05, s:cterm01, 'bold' ])
+
+for mode in keys(g:airline#themes#fruit_punch#palette)
+  if mode == 'accents'
+    continue
+  endif
+endfor
