@@ -1,4 +1,4 @@
-# vim-airline-themes [![Build Status](https://travis-ci.org/paroxayte/vim-airline-themes.svg?branch=tests)](https://travis-ci.org/paroxayte/vim-airline-themes)
+# vim-airline-themes [![Build Status](https://travis-ci.org/vim-airline/vim-airline-themes.svg?branch=master)](https://travis-ci.org/vim-airline/vim-airline-themes)
 
 This is the official theme repository for [vim-airline][11]
 
