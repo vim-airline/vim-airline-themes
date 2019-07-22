@@ -89,6 +89,7 @@ Currently this repository contains the following themes:
     * cool
     * dark
     * dark_minimal
+    * desertink
     * deus
     * distinguished
     * dracula
