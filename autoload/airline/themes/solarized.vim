@@ -9,6 +9,7 @@ function! airline#themes#solarized#refresh()
   let s:use_green            = get(g:, 'airline_solarized_normal_green', 0)
   let s:dark_text            = get(g:, 'airline_solarized_dark_text', 0)
   let s:dark_inactive_border = get(g:, 'airline_solarized_dark_inactive_border', 0)
+  let s:enable_command_color = get(g:, 'airline_solarized_enable_command_color', 0)
   let s:tty                  = &t_Co == 8
 
   """"""""""""""""""""""""""""""""""""""""""""""""
@@ -99,6 +100,13 @@ function! airline#themes#solarized#refresh()
   let s:R3 = s:N3
   let s:RM = s:NM
   let s:RF = s:NF
+
+  " Command mode
+  let s:C1 = [s:N1[0], s:violet, '']
+  let s:C2 = s:N2
+  let s:C3 = s:N3
+  let s:CF = s:NF
+  let s:CM = s:NM
 
   " Inactive, according to VertSplit in solarized
   " (bg dark: base00; bg light: base0)
@@ -194,6 +202,23 @@ function! airline#themes#solarized#refresh()
 
   let g:airline#themes#solarized#palette.replace_modified.airline_warning =
         \ g:airline#themes#solarized#palette.normal.airline_warning
+
+  let g:airline#themes#solarized#palette.replace_modified.airline_warning =
+        \ g:airline#themes#solarized#palette.normal.airline_warning
+
+  if s:enable_command_color
+    let g:airline#themes#solarized#palette.commandline = airline#themes#generate_color_map(
+          \ [s:C1[0].g, s:C1[1].g, s:C1[0].t, s:C1[1].t, s:C1[2]],
+          \ [s:C2[0].g, s:C2[1].g, s:C2[0].t, s:C2[1].t, s:C2[2]],
+          \ [s:C3[0].g, s:C3[1].g, s:C3[0].t, s:C3[1].t, s:C3[2]])
+
+    let g:airline#themes#solarized#palette.commandline.airline_warning =
+          \ g:airline#themes#solarized#palette.normal.airline_warning
+
+    let g:airline#themes#solarized#palette.commandline_modified = {
+          \ 'airline_c': [s:RM[0].g, s:RM[1].g,
+          \ s:RM[0].t, s:RM[1].t, s:RM[2]]}
+  endif
 
   let g:airline#themes#solarized#palette.tabline = {}
 
