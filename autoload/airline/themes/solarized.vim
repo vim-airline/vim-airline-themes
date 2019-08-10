@@ -7,6 +7,7 @@ function! airline#themes#solarized#refresh()
   let s:background           = get(g:, 'airline_solarized_bg', &background)
   let s:ansi_colors          = get(g:, 'solarized_termcolors', 16) != 256 && &t_Co >= 16 ? 1 : 0
   let s:use_green            = get(g:, 'airline_solarized_normal_green', 0)
+  let s:dark_inactive_tab    = get(g:, 'airline_solarized_dark_inactive_background', 0)
   let s:dark_text            = get(g:, 'airline_solarized_dark_text', 0)
   let s:dark_inactive_border = get(g:, 'airline_solarized_dark_inactive_border', 0)
   let s:tty                  = &t_Co == 8
@@ -198,7 +199,7 @@ function! airline#themes#solarized#refresh()
   let g:airline#themes#solarized#palette.tabline = {}
 
   let g:airline#themes#solarized#palette.tabline.airline_tab = [
-        \ s:I2[0].g, s:I2[1].g, s:I2[0].t, s:I2[1].t, s:I2[2]]
+        \ s:I2[0].g, s:I2[1].g, s:I2[0].t, (s:dark_inactive_tab ? s:I3[0].t : s:I2[1].t), s:I2[2]]
 
   let g:airline#themes#solarized#palette.tabline.airline_tabtype = [
         \ s:N2[0].g, s:N2[1].g, s:N2[0].t, s:N2[1].t, s:N2[2]]
