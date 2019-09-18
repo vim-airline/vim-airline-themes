@@ -60,6 +60,7 @@ Currently this repository contains the following themes:
     * base16_google
     * base16_grayscale
     * base16_greenscreen
+    * base16_gruvbox_dark_hard
     * base16_harmonic16
     * base16_hopscotch
     * base16_isotope
