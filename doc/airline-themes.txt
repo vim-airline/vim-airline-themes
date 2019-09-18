@@ -263,6 +263,11 @@ Changes inactive window panes to have a dark bottom border instead
 of light by default. To enable it: >
     let g:airline_solarized_dark_inactive_border = 1
 <
+                                        *g:airline_solarized_enable_command_color*
+
+In command mode, set the status line to its own color (violet). To enable it: >
+    let airline_solarized_enable_command_color = 1
+<
                                                         *g:solarized_base16*
 
 Base16 has a Solarized theme with the usual colors, but mapped in the
