@@ -45,7 +45,7 @@ If you are interested in becoming the official maintainer of this project, pleas
 
 # License
 
-MIT License. Copyright (c) 2013-2017 Bailey Ling & Contributors.
+MIT License. Copyright (c) 2013-2019 Bailey Ling & Contributors.
 
 
 [1]: https://github.com/bling
