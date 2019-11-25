@@ -68,7 +68,12 @@ let g:airline#themes#dracula#palette.replace = airline#themes#generate_color_map
 let s:IN1 = [ s:gui04 , s:guiWhite , s:cterm04 , s:ctermWhite ]
 let s:IN2 = [ s:gui04 , s:gui01 , s:cterm04  , s:cterm01 ]
 let s:IA = [ s:IN1[1] , s:IN2[1] , s:IN1[3] , s:IN2[3] , '' ]
-let g:airline#themes#dracula#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
+
+if get(g:, 'airline#themes#dracula#inactive_simple', 1)
+  let g:airline#themes#dracula#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
+else
+  let g:airline#themes#dracula#palette.inactive = airline#themes#generate_color_map(s:IN1, s:IN2, s:IA)
+endif
 
 " Warning info
 let s:WARNING = [ s:guiBlack, s:gui03, s:ctermBlack, s:cterm03 ]

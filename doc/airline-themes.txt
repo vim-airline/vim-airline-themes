@@ -212,6 +212,12 @@ Set to 256 for 256-color mode (the default), or 16 for 16-color mode.
 Has no effect if using true/24-bit color. To enable 16-color mode: >
     let g:deus_termcolors = 16
 
+*airline-theme-dracula*
+------------------------------------------------------------------------------
+You can select an inactive color scheme with the following options: >
+    let g:airline#themes#dracula#inactive_simple = 1
+default: 1
+
 *airline-theme-minimalist*
 ------------------------------------------------------------------------------
                                              *g:airline_minimalist_showmod*
