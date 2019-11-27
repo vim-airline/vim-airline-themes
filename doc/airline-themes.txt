@@ -93,7 +93,6 @@ Currently this repository contains the following themes:
     * desertink
     * deus
     * distinguished
-    * dracula
     * durant
     * faryfloss
     * fruit_punch
