@@ -28,7 +28,6 @@ Currently this repository contains the following themes:
     * alduin
     * angr
     * atomic
-    * aurora
     * ayu_light
     * ayu_mirage
     * ayu_dark
