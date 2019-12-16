@@ -133,7 +133,6 @@ Currently this repository contains the following themes:
     * tomorrow
     * ubaryd
     * understated
-    * vice
     * violet
     * wombat
     * xtermlight
