@@ -113,6 +113,7 @@ Currently this repository contains the following themes:
     * night_owl
     * onedark (|airline-theme-onedark|)
     * ouo
+    * owo
     * papercolor
     * peaksea
     * powerlineish
