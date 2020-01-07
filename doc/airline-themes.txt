@@ -297,6 +297,6 @@ Contributions and pull requests are welcome.
 ==============================================================================
 LICENSE                                            *airline-themes-license*
 
-MIT License.  Copyright © 2013-2019 Bailey Ling, et al
+MIT License.  Copyright © 2013-2020 Bailey Ling, et al
 
  vim:tw=78:ts=8:ft=help:norl:
