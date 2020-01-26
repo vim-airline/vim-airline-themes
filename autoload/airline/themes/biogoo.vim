@@ -16,10 +16,10 @@ function! airline#themes#biogoo#refresh()
 	let s:N3 = airline#themes#get_highlight2(['Include', 'fg'], ['VertSplit', 'bg'], 'bold')
 	let g:airline#themes#biogoo#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
-	let s:Nmod = airline#themes#get_highlight2(['PmenuThumb', 'fg'],['VertSplit', 'bg'])
+	let s:Nmod = airline#themes#get_highlight2(['MatchParen', 'bg'], ['VertSplit', 'bg'])
 	let g:airline#themes#biogoo#palette.normal_modified = {'airline_c': s:Nmod}
 
-	let s:I1 = airline#themes#get_highlight2(['VertSplit', 'bg'], ['PmenuThumb', 'fg'], 'bold')
+	let s:I1 = airline#themes#get_highlight2(['VertSplit', 'bg'], ['MatchParen', 'bg'], 'bold')
 	let s:I2 = s:N2
 	let s:I3 = s:N3
 	let g:airline#themes#biogoo#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
