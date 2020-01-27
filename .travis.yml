@@ -3,12 +3,26 @@ language: vim
 cache:
   directories:
     - $HOME/.vvm
-
-env:
-  - VIM_VERSION=8.2.0000
-  - VIM_VERSION=8.1.1280
-  - VIM_VERSION=8.1.0000
-  - VIM_VERSION=8.0.0000
+matrix:
+  include:
+    - os: linux
+      env:
+        - VIM_VERSION=8.0.0000
+    - os: linux
+      env:
+        - VIM_VERSION=8.1.0000
+    - os: linux
+      env:
+        - VIM_VERSION=8.2.0000
+    - os: osx
+      env:
+        - VIM_VERSION=8.0.0000
+    - os: osx
+      env:
+        - VIM_VERSION=8.1.0000
+    - os: osx
+      env:
+        - VIM_VERSION=8.2.0000
 
 before_install:
   - curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup; true
