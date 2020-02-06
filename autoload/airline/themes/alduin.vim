@@ -85,9 +85,13 @@ let g:airline#themes#alduin#palette.inactive_modified = s:modified
 
 " CtrlP
 if !get(g:, 'loaded_ctrlp', 0)
-    finish
+  finish
 endif
 
 let s:CP1 = [s:guiWhite, s:gui01, s:ctermWhite, s:cterm01]
 let s:CP2 = [s:guiWhite, s:gui03, s:ctermWhite, s:cterm01]
 let s:CP3 = [s:guiWhite, s:gui0D, s:ctermWhite, s:cterm0D]
+let g:airline#themes#alduin#palette.ctrlp = airline#extensions#ctrlp#generate_color_map(
+      \ s:CP1,
+      \ s:CP2,
+      \ s:CP3)
