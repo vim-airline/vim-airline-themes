@@ -120,6 +120,7 @@ Currently this repository contains the following themes:
     * raven
     * ravenpower
     * seagull
+    * seoul256
     * serene
     * sierra
     * silver
