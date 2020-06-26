@@ -1,4 +1,5 @@
-language: vim
+language: generic
+sudo: false
 
 cache:
   directories:
