@@ -60,6 +60,11 @@ let s:IA2   = [ s:gui05, s:gui01, s:cterm05, s:cterm01 ]
 let s:IA3   = [ s:gui05, s:gui01, s:cterm05, s:cterm01 ]
 let g:airline#themes#base16_gruvbox_dark_hard#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
 
+let g:airline#themes#base16_gruvbox_dark_hard#palette.terminal = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+let g:airline#themes#base16_gruvbox_dark_hard#palette.normal.airline_term = s:N3
+let g:airline#themes#base16_gruvbox_dark_hard#palette.terminal.airline_term = s:N3
+let g:airline#themes#base16_gruvbox_dark_hard#palette.visual.airline_term = s:N3
+
 " Here we define the color map for ctrlp.  We check for the g:loaded_ctrlp
 " variable so that related functionality is loaded iff the user is using
 " ctrlp. Note that this is optional, and if you do not define ctrlp colors
