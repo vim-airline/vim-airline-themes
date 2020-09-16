@@ -111,6 +111,7 @@ Currently this repository contains the following themes:
     * monochrome
     * murmur
     * night_owl
+    * nord-minimal
     * onedark (|airline-theme-onedark|)
     * ouo
     * owo
