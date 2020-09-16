@@ -47,6 +47,11 @@ let g:airline#themes#cool#palette.inactive = airline#themes#generate_color_map(s
       "\ 'airline_c': [ '#875faf' , '' , 97 , '' , '' ] ,
       "\ }
 
+" TERMINAL
+let g:airline#themes#cool#palette.terminal = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+let g:airline#themes#cool#palette.normal.airline_term = s:N3
+let g:airline#themes#cool#palette.terminal.airline_term = s:I3
+let g:airline#themes#cool#palette.visual.airline_term = s:V3
 
 let g:airline#themes#cool#palette.accents = {
       \ 'red': [ '#ff0000' , '' , 196 , ''  ]
