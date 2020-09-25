@@ -103,6 +103,7 @@ Currently this repository contains the following themes:
     * kolor
     * laederon
     * light
+    * lighthaus
     * lucius
     * luna
     * minimalist (|airline-theme-minimalist|)
