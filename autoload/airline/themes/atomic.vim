@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 2.0.0
+"  Version : 2.1.0
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/atomic
@@ -71,8 +71,6 @@ function! airline#themes#atomic#refresh()
 	" Settings
 	let g:airline_symbols.paste = 'Ξ'
 	let g:airline_symbols.spell = 'S'
-	let g:airline_section_z = airline#section#create(['--%1p%%-- ',
-		\ '%#__accent_bold#%l%#__restore__#', ':%c'])
 
 endfunction
 
