@@ -30,7 +30,40 @@ matrix:
     - os: osx
       env:
         - VIM_VERSION=8.2.1000
-
+        # added power support arch ppc64le.
+        
+    - os: linux
+      arch: ppc64le
+      env:
+        - VIM_VERSION=8.0.0000
+    - os: linux
+      arch: ppc64le
+      env:
+        - VIM_VERSION=8.1.0000
+    - os: linux
+      arh: ppc64le
+      env:
+        - VIM_VERSION=8.2.0000
+    - os: linux
+      arch: ppc64le
+      env:
+        - VIM_VERSION=8.2.1000
+    - os: osx
+      arch: ppc64le
+      env:
+        - VIM_VERSION=8.0.0000
+    - os: osx
+      arch: ppc64le
+      env:
+        - VIM_VERSION=8.1.0000
+    - os: osx
+      arch: ppc64le
+      env:
+        - VIM_VERSION=8.2.0000
+    - os: osx
+      arch: ppc64le
+      env:
+        - VIM_VERSION=8.2.1000
 before_install:
   - curl https://raw.githubusercontent.com/kana/vim-version-manager/master/bin/vvm | python - setup; true
   - source ~/.vvm/etc/login
