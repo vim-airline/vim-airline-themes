@@ -141,6 +141,7 @@ Currently this repository contains the following themes:
     * wombat
     * xtermlight
     * zenburn
+    * transparent
 
 ==============================================================================
 NAME                                         *airline-themes-configuration*
