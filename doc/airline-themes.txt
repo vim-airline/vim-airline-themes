@@ -102,6 +102,7 @@ Currently this repository contains the following themes:
     * kalisi
     * kolor
     * laederon
+    * lessnoise
     * light
     * lighthaus
     * lucius
