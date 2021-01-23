@@ -94,6 +94,8 @@ Currently this repository contains the following themes:
     * durant
     * faryfloss
     * fruit_punch
+    * google_dark
+    * google_light
     * hybrid
     * hybridline
     * jay
