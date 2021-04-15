@@ -116,7 +116,7 @@ Currently this repository contains the following themes:
     * base16_grayscale_dark
     * base16_grayscale_light
     * base16_greenscreen
-    * base16_gruvbox_dark_hard
+    * base16_gruvbox_dark_hard (|airline-theme-base-gruvbox-dark-hard|)
     * base16_gruvbox_dark_medium
     * base16_gruvbox_dark_pale
     * base16_gruvbox_dark_soft
@@ -320,6 +320,13 @@ the different modes, so should bring some performance improvements because
 airline does not have to redefine highlighting groups after they have been
 setup once. However, it won't change colors if e.g. the mode changes.
 
+*airline-theme-base-gruvbox-dark-hard*
+------------------------------------------------------------------------------
+
+If you want to use the old version of the base16-gruvbox-dark-hard theme, use
+this: >
+    let g:airline_base16_gruvbox_dark_hard_old = 1
+
 *airline-theme-deus*
 ------------------------------------------------------------------------------
                                                         *g:deus_termcolors*
@@ -332,7 +339,7 @@ Has no effect if using true/24-bit color. To enable 16-color mode: >
 ------------------------------------------------------------------------------
                                              *g:airline_minimalist_showmod*
 
-Highlight when the buffer is modified.
+Highlight when the buffer is modified. >
     let g:airline_minimalist_showmod = 1
 <
 *airline-theme-onedark*
