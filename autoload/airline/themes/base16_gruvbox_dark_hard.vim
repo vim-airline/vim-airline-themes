@@ -24,8 +24,9 @@ let s:gui0D = '#83a598'
 let s:gui0E = '#d3869b'
 let s:gui0F = '#d65d0e'
 
-" Terminal color definitions
+" termcolor and palette definitions differ between old and new base16_gruvbox_dark_hard
 if get(g:, 'airline_base16_gruvbox_dark_hard_old', 0)
+  " Terminal color definitions
   let s:cterm00 = 234
   let s:cterm01 = 235
   let s:cterm02 = 236
@@ -72,7 +73,20 @@ if get(g:, 'airline_base16_gruvbox_dark_hard_old', 0)
   let g:airline#themes#base16_gruvbox_dark_hard#palette.normal.airline_term = s:N3
   let g:airline#themes#base16_gruvbox_dark_hard#palette.terminal.airline_term = s:N3
   let g:airline#themes#base16_gruvbox_dark_hard#palette.visual.airline_term = s:N3
+
+  " Here we define the color map for ctrlp.  We check for the g:loaded_ctrlp
+  " variable so that related functionality is loaded iff the user is using
+  " ctrlp. Note that this is optional, and if you do not define ctrlp colors
+  " they will be chosen automatically from the existing palette.
+  if !get(g:, 'loaded_ctrlp', 0)
+    finish
+  endif
+  let g:airline#themes#base16_{s:scheme_slug}#palette.ctrlp = airline#themes#generate_color_map(
+        \ [ s:gui07, s:gui02, s:cterm07, s:cterm02, '' ],
+        \ [ s:gui07, s:gui04, s:cterm07, s:cterm04, '' ],
+        \ [ s:gui05, s:gui01, s:cterm05, s:cterm01, 'bold' ])
 else
+  " Terminal color definitions
   let s:cterm00        = "00"
   let s:cterm03        = "08"
   let s:cterm05        = "07"
@@ -98,51 +112,37 @@ else
     let s:cterm09        = "09"
     let s:cterm0F        = "14"
   endif
+
+  let g:airline#themes#base16_{s:scheme_slug}#palette.normal = airline#themes#generate_color_map(
+        \ [ s:gui01, s:gui04, s:cterm01, s:cterm04 ],
+        \ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
+        \ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
+  let g:airline#themes#base16_{s:scheme_slug}#palette.normal_modified = {
+        \ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
+
+  let g:airline#themes#base16_{s:scheme_slug}#palette.insert = airline#themes#generate_color_map(
+        \ [ s:gui01, s:gui0B, s:cterm01, s:cterm0B ],
+        \ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
+        \ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
+  let g:airline#themes#base16_{s:scheme_slug}#palette.insert_modified = {
+        \ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
+
+  let g:airline#themes#base16_{s:scheme_slug}#palette.replace = airline#themes#generate_color_map(
+        \ [ s:gui01, s:gui0E, s:cterm01, s:cterm0E ],
+        \ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
+        \ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
+  let g:airline#themes#base16_{s:scheme_slug}#palette.replace_modified = {
+        \ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
+
+  let g:airline#themes#base16_{s:scheme_slug}#palette.visual = airline#themes#generate_color_map(
+        \ [ s:gui01, s:gui09, s:cterm01, s:cterm09 ],
+        \ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
+        \ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
+  let g:airline#themes#base16_{s:scheme_slug}#palette.visual_modified = {
+        \ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
+
+  let g:airline#themes#base16_{s:scheme_slug}#palette.inactive = airline#themes#generate_color_map(
+        \ [ s:gui01, s:gui01, s:cterm01, s:cterm01 ],
+        \ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ],
+        \ [ s:gui05, s:gui01, s:cterm05, s:cterm01 ])
 endif
-
-let g:airline#themes#base16_{s:scheme_slug}#palette.normal = airline#themes#generate_color_map(
-	\ [ s:gui01, s:gui04, s:cterm01, s:cterm04 ],
-	\ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
-	\ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
-let g:airline#themes#base16_{s:scheme_slug}#palette.normal_modified = {
-	\ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
-
-let g:airline#themes#base16_{s:scheme_slug}#palette.insert = airline#themes#generate_color_map(
-	\ [ s:gui01, s:gui0B, s:cterm01, s:cterm0B ],
-	\ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
-	\ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
-let g:airline#themes#base16_{s:scheme_slug}#palette.insert_modified = {
-	\ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
-
-let g:airline#themes#base16_{s:scheme_slug}#palette.replace = airline#themes#generate_color_map(
-	\ [ s:gui01, s:gui0E, s:cterm01, s:cterm0E ],
-	\ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
-	\ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
-let g:airline#themes#base16_{s:scheme_slug}#palette.replace_modified = {
-	\ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
-
-let g:airline#themes#base16_{s:scheme_slug}#palette.visual = airline#themes#generate_color_map(
-	\ [ s:gui01, s:gui09, s:cterm01, s:cterm09 ],
-	\ [ s:gui04, s:gui02, s:cterm04, s:cterm02 ],
-	\ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ])
-let g:airline#themes#base16_{s:scheme_slug}#palette.visual_modified = {
-	\ 'airline_c' : [ s:gui07, s:gui01, s:cterm07, s:cterm01 ]}
-
-let g:airline#themes#base16_{s:scheme_slug}#palette.inactive = airline#themes#generate_color_map(
-	\ [ s:gui01, s:gui01, s:cterm01, s:cterm01 ],
-	\ [ s:gui04, s:gui01, s:cterm04, s:cterm01 ],
-	\ [ s:gui05, s:gui01, s:cterm05, s:cterm01 ])
-
-
-
-" Here we define the color map for ctrlp.  We check for the g:loaded_ctrlp
-" variable so that related functionality is loaded iff the user is using
-" ctrlp. Note that this is optional, and if you do not define ctrlp colors
-" they will be chosen automatically from the existing palette.
-if !get(g:, 'loaded_ctrlp', 0)
-  finish
-endif
-let g:airline#themes#base16_{s:scheme_slug}#palette.ctrlp = airline#themes#generate_color_map(
-      \ [ s:gui07, s:gui02, s:cterm07, s:cterm02, '' ],
-      \ [ s:gui07, s:gui04, s:cterm07, s:cterm04, '' ],
-      \ [ s:gui05, s:gui01, s:cterm05, s:cterm01, 'bold' ])
