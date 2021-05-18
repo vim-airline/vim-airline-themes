@@ -237,6 +237,8 @@ Currently this repository contains the following themes:
     * raven
     * ravenpower
     * seagull
+    * selenized
+    * selenized_bw
     * seoul256
     * serene
     * sierra
