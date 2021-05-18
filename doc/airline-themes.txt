@@ -246,6 +246,7 @@ Currently this repository contains the following themes:
     * sol
     * solarized (|airline-theme-solarized|)
     * solarized_flood
+    * supernova
     * term
     * term_light
     * tomorrow
