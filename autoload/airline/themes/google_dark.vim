@@ -5,20 +5,20 @@ let g:airline#themes#google_dark#palette = {}
 
 let s:RED    = '#EA4335'
 let s:GREEN  = '#34A853'
-let s:YELLOW = '#FBBC05'
+let s:YELLOW = '#FBBC04'
 let s:BLUE   = '#4285F4'
-let s:BLACK  = '#000000'
-let s:DGREY  = '#656565'
-let s:LGREY  = '#EEEEEE'
+let s:BLACK  = '#202124'
+let s:DGREY  = '#5F6368'
+let s:LGREY  = '#E8EAED'
 let s:WHITE  = '#FFFFFF'
 
 let s:TERM_RED    = 167
 let s:TERM_GREEN  = 71
-let s:TERM_YELLOW = 220
+let s:TERM_YELLOW = 214
 let s:TERM_BLUE   = 69
 let s:TERM_BLACK  = 16
-let s:TERM_DGREY  = 241
-let s:TERM_LGREY  = 255
+let s:TERM_DGREY  = 59
+let s:TERM_LGREY  = 189
 let s:TERM_WHITE  = 231
 
 let s:GREY0  = s:WHITE
