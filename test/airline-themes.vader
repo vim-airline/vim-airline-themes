@@ -15,15 +15,15 @@ Execute (validate themes):
       Log theme
       execute('AirlineTheme ' . theme)
       execute('source ' . themePath)
-      normal i
-      normal :
-      normal R
-      normal v
+      normal! i
+      normal! :
+      normal! R
+      normal! v
       setlocal mod
-      normal i
-      normal :
-      normal R
-      normal v
+      normal! i
+      normal! :
+      normal! R
+      normal! v
       setlocal nomod
 
     endfor
