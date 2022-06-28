@@ -11,7 +11,6 @@ jobs:
     strategy:
       matrix:
         vim:
-        - v8.2.2000
         - v8.2.1000
         - v8.2.0000
         - v8.1.0000
@@ -20,25 +19,16 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@main
+      with:
+        repository: thinca/vim-themis
+        path: vim-themis
 
     - name: Setup Vim
       uses: rhysd/action-setup-vim@v1
       with:
         version: ${{ matrix.vim }}
 
-    - name: Install Dependencies
-      run: | 
-        git clone https://github.com/junegunn/vader.vim.git
-        git clone https://github.com/vim-airline/vim-airline
-        find $PWD/autoload/airline/themes -name "*.vim" > themes.txt
     - name: Run Test
-      run: |
-        vim --not-a-term -Nu <(cat << VIMRC
-        filetype off
-        set rtp+=vader.vim
-        set rtp+=vim-airline
-        set rtp+=.
-        set rtp+=after
-        filetype plugin indent on
-        syntax enable
-        VIMRC) -c 'Vader! test/*' > /dev/null
+      env:
+        THEMIS_VIM: ${{ steps.vim.outputs.executable }}
+      run: ./vim-themis/bin/themis --reporter spec
