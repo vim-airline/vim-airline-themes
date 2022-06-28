@@ -4,8 +4,6 @@ let s:themes_dir = expand('<sfile>:h:h') . '/autoload/airline/themes'
 let s:themes = map(glob(s:themes_dir . '/*.vim', 1, 1), 'fnamemodify(v:val, ":t:r")')
 let s:suite = themis#suite('vim-airline-themes')
 
-call themis#helper('command')
-
 function! s:Test(theme)
   Throws execute('AirlineTheme ' . a:theme)
 endfunction
