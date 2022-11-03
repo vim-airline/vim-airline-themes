@@ -198,6 +198,7 @@ Currently this repository contains the following themes:
     * bubblegum
     * cobalt2
     * cool
+    * cyberpunk
     * dark
     * dark_minimal
     * desertink
