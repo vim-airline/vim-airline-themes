@@ -8,9 +8,10 @@ function! airline#themes#zenburn#refresh()
   let s:N1 = airline#themes#get_highlight2(['DbgCurrent', 'bg'], ['Folded', 'fg'], 'bold')
   let s:N2 = airline#themes#get_highlight('Folded')
   let s:N3 = airline#themes#get_highlight('NonText')
+  let s:Nmod = airline#themes#get_highlight('Comment')
 
   let g:airline#themes#zenburn#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
-  let s:Nmod = airline#themes#get_highlight('Comment')
+  let g:airline#themes#zenburn#palette.normal.airline_c = s:Nmod
   let g:airline#themes#zenburn#palette.normal_modified = {
         \ 'airline_c': s:Nmod
         \ }
@@ -19,6 +20,7 @@ function! airline#themes#zenburn#refresh()
   let s:I2 = airline#themes#get_highlight2(['String', 'fg'], ['Folded', 'bg'])
   let s:I3 = s:N3
   let g:airline#themes#zenburn#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
+  let g:airline#themes#zenburn#palette.insert.airline_c = s:Nmod
   let g:airline#themes#zenburn#palette.insert_modified = g:airline#themes#zenburn#palette.normal_modified
 
   let s:R1 = airline#themes#get_highlight2(['DbgCurrent', 'bg'], ['Comment', 'fg'], 'bold')
@@ -41,4 +43,3 @@ function! airline#themes#zenburn#refresh()
 endfunction
 
 call airline#themes#zenburn#refresh()
-

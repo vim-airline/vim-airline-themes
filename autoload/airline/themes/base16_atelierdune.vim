@@ -1,6 +1,7 @@
 " vim-airline template by chartoin (http://github.com/chartoin)
 " Base 16 Atelier Dune Scheme by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/dune)
 let g:airline#themes#base16_atelierdune#palette = {}
+
 let s:gui00 = "#20201d"
 let s:gui01 = "#292824"
 let s:gui02 = "#6e6b5e"
@@ -27,12 +28,13 @@ let s:cterm05 = 144
 let s:cterm06 = 188
 let s:cterm07 = 15
 let s:cterm08 = 167
-let s:cterm09 = 130
-let s:cterm0A = 178
+let s:cterm09 = 182
 let s:cterm0B = 71
 let s:cterm0C = 36
 let s:cterm0D = 68
 let s:cterm0E = 134
+" those two are not used
+let s:cterm0A = 178
 let s:cterm0F = 167
 
 let s:N1   = [ s:gui01, s:gui0B, s:cterm01, s:cterm0B ]
@@ -59,6 +61,20 @@ let s:IA1   = [ s:gui05, s:gui01, s:cterm05, s:cterm01 ]
 let s:IA2   = [ s:gui05, s:gui01, s:cterm05, s:cterm01 ]
 let s:IA3   = [ s:gui05, s:gui01, s:cterm05, s:cterm01 ]
 let g:airline#themes#base16_atelierdune#palette.inactive = airline#themes#generate_color_map(s:IA1, s:IA2, s:IA3)
+
+" Warning info
+let s:WARNING = [ s:gui01, s:gui0A, s:cterm0C, s:cterm06 ]
+let s:ERROR = [ s:gui07, s:gui08, s:cterm07, s:cterm08 ]
+
+let g:airline#themes#base16_atelierdune#palette.normal.airline_warning = s:WARNING
+let g:airline#themes#base16_atelierdune#palette.insert.airline_warning = s:WARNING
+let g:airline#themes#base16_atelierdune#palette.visual.airline_warning = s:WARNING
+let g:airline#themes#base16_atelierdune#palette.replace.airline_warning = s:WARNING
+
+let g:airline#themes#base16_atelierdune#palette.normal.airline_error = s:ERROR
+let g:airline#themes#base16_atelierdune#palette.insert.airline_error = s:ERROR
+let g:airline#themes#base16_atelierdune#palette.visual.airline_error = s:ERROR
+let g:airline#themes#base16_atelierdune#palette.replace.airline_error = s:ERROR
 
 " Here we define the color map for ctrlp.  We check for the g:loaded_ctrlp
 " variable so that related functionality is loaded iff the user is using

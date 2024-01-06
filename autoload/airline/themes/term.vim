@@ -32,7 +32,7 @@ let s:R4 = [ '#E55345' , 9 ]
 let s:PA = [ '#94E42C' , 6 ]
 
 " Info modified
-let s:IM = [ '#40403C' , 238 ]
+let s:IM = [ '#40403C' , 7 ]
 
 " Inactive mode
 let s:IA = [ '#767676' , s:N3[1] , 243 , s:N3[3] , '' ]
