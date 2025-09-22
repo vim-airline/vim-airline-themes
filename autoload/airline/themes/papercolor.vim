@@ -49,6 +49,7 @@ let g:airline#themes#papercolor#palette.visual_modified = {
 " Inactive:
 let s:IA = [ '#585858' , '#e4e4e4' , 240 , 254 , '' ]
 let g:airline#themes#papercolor#palette.inactive = airline#themes#generate_color_map(s:IA, s:IA, s:IA)
+let g:airline#themes#papercolor#palette.inactive.airline_c = s:N2
 let g:airline#themes#papercolor#palette.inactive_modified = {
       \ 'airline_c': [ '#585858' , '#e4e4e4' , 240 , 254 , '' ] ,
       \ }
