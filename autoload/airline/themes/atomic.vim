@@ -7,7 +7,7 @@
 "
 "----------------------------------------------------------------
 "  Theme   : Atomic
-"  Version : 2.3.0
+"  Version : 2.3.1
 "  License : MIT
 "  Author  : Gerard Bajona
 "  URL     : https://github.com/gerardbm/atomic
@@ -44,6 +44,7 @@ function! airline#themes#atomic#refresh()
 	let s:T2 = airline#themes#get_highlight2(['LineNr', 'bg'], ['LineNr', 'fg'], 'none')
 	let s:T3 = airline#themes#get_highlight2(['Boolean', 'fg'], ['StatusLine', 'bg'])
 	let g:airline#themes#atomic#palette.terminal = airline#themes#generate_color_map(s:T1, s:T2, s:T3)
+	let g:airline#themes#atomic#palette.terminal.airline_term = copy(g:airline#themes#atomic#palette.normal.airline_c)
 
 	let s:V1 = airline#themes#get_highlight2(['LineNr', 'bg'], ['WarningMsg', 'fg'], 'none')
 	let s:V2 = airline#themes#get_highlight2(['LineNr', 'bg'], ['LineNr', 'fg'], 'none')
