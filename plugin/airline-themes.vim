@@ -13,3 +13,7 @@ let g:loaded_airline_themes = 1
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
+
+if exists('g:loaded_fzf_vim')
+  command! -bang AirlineThemesExplorer call explorer#fzf_wrapper#browse(<bang>0)
+endif
