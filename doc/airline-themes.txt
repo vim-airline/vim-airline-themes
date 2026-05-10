@@ -226,6 +226,7 @@ Currently this repository contains the following themes:
     * minimalist (|airline-theme-minimalist|)
     * molokai
     * monochrome
+    * mountaineer_grey
     * murmur
     * night_owl
     * nord-minimal
